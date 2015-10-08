@@ -29,6 +29,8 @@ jQuery(document).ready( function( $ ) {
 
 	// Flowtime.onNavigation(onNavigation);
 	var onNavigation = function (e) {
+
+		setBodyClass();
 		animateFeet();
 
 		// console.log(cacheTitle + ' > ' + document.title.replace("Flowtime.js | ", ""));
@@ -48,17 +50,19 @@ jQuery(document).ready( function( $ ) {
 		console.log( e );
 	}
 
-	var animateFeet = function ( e ) {
-		if (
-			   -1 !== location.hash.indexOf( 'amanda' )
-			|| -1 !== location.hash.indexOf( 'dave' )
-			|| -1 !== location.hash.indexOf( 'james' )
-		) {
-			$('#feet').show();
-		}else {
-			$('#feet').hide();
-		}
+	var setBodyClass = function() {
+		var sectionClasses = [ 'amanda', 'dave', 'james' ];
 
+		sectionClasses.forEach( function( name ){
+			if ( -1 !== location.hash.indexOf( name ) ) {
+				$('body').addClass( name );
+			}else {
+				$('body').removeClass( name );
+			}
+		} ); 
+	}
+
+	var animateFeet = function ( e ) {
 		$('#feet').addClass('moving');
 
 		setTimeout( function(){
