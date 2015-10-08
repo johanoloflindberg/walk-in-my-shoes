@@ -112,41 +112,9 @@ table {
 	max-height: 100%;
 	overflow: hidden;
 
-	.inner {
-		width: auto;
-		min-width: 8rem;
-		margin: 8rem 4rem;
-		text-align: center;
-		position: relative;
+	
 
-		max-height: 75%;
-
-		$tileHeight: 65rem;
-
-		&::before, &::after {
-			content: "";
-			display:block;
-			background-color: #F3EBD4;
-
-			width: 100%;
-			height: $tileHeight;
-			position: absolute;
-			top: 0;
-			transform: translateY( - $tileHeight - 1 );
-		}
-
-		&::after {
-			top: auto;
-			bottom: 0;
-			transform: translateY( $tileHeight + 1 );
-		}
-	}
-	.innerer {
-		padding: 2rem;
-		height: 100%;
-
-		overflow: auto;
-	}
+	
 
 	h2 {
 		font-size: 1.4em;

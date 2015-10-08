@@ -111,7 +111,7 @@ nav {
 	position: fixed;
 	right: 0;
 	top:0;
-	transform: translateY( -($menu_height + 20) );
+	transform: translateY( -($menu_height + 500) );
 	transition: transform 0.6s cubic-bezier( .56, .1, .34, .91 );
 	padding-top: 6.2rem;
 

@@ -2,7 +2,7 @@
 
 #feet {
 	.amanda, .james, .dave {
-		transform: translateY( -20rem );
+		transform: translateY( -30rem );
 		transition: transform 0.6s cubic-bezier(.56,.1,.34,.91);
 	}
 }
@@ -16,6 +16,7 @@ body.amanda, body.james, body.dave {
 body.amanda #feet .amanda { transform: translateY( 0 ); }
 body.james #feet .james { transform: translateY( 0 ); }
 body.dave #feet .dave { transform: translateY( 0 ); }
+body.intro #feet .james { transform: translateY( -4rem ); }
 
 #feet {
 	position: absolute;

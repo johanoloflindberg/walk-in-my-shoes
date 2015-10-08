@@ -51,7 +51,7 @@ jQuery(document).ready( function( $ ) {
 	}
 
 	var setBodyClass = function() {
-		var sectionClasses = [ 'amanda', 'dave', 'james' ];
+		var sectionClasses = [ 'amanda', 'dave', 'james', 'intro', 'outro' ];
 
 		sectionClasses.forEach( function( name ){
 			if ( -1 !== location.hash.indexOf( name ) ) {

@@ -1,9 +1,46 @@
 body {
+
+	.intro-page {
+		.inner {
+			background-color: rgba( 125, 125, 125, .6 );
+			margin-top: 10rem;
+		}
+	}
+
+	.intro-page, &.amanda .ft-page, &.james .ft-page, &.dave .ft-page {
+		.inner {
+
+			width: auto;
+			min-width: 8rem;
+			
+			text-align: center;
+			position: relative;
+
+			max-height: 75%;
+		}
+
+		.innerer {
+			padding: 2rem;
+			height: 100%;
+
+			overflow: auto;
+		}
+	}
+
 	&.amanda, &.james, &.dave {
 		.ft-page {
 			.inner {
 				background-color: #F3EBD4;
 				color: #636466;
+
+				width: auto;
+				min-width: 8rem;
+				margin: 8rem 4rem;
+				text-align: center;
+				position: relative;
+
+				max-height: 75%;
+
 			}
 		}
 	}
@@ -13,10 +50,34 @@ body {
 	}
 
 	&.james .ft-page{
-		background: lightgray url(../img/james/background-pattern.png) repeat;
+		background: #666 url(../img/james/background-pattern.png) repeat;
 	}
 
+	&.intro .ft-page,
 	&.dave .ft-page {
-		background: gray url(../img/dave/background-pattern.png) repeat;
+		background: #000 url(../img/dave/background-pattern.png) repeat;
+	}
+}
+
+
+
+
+body {
+	&.intro {
+		
+		.intro-banner {
+			width: 100%;
+			background-color: #E9B54A;
+			text-align: center;
+			margin: 15rem 0 3rem 0;
+			img {
+				height: 12rem;
+				width: auto;
+				margin: 2rem auto;
+			}
+		}
+		p {
+			text-align: center;
+		}
 	}
 }
