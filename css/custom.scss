@@ -86,6 +86,11 @@ a.donate {
 		text-align: center;
 	}
 
+	h2 {
+		font-size: 1.4em;
+		font-weight: bold;
+	}
+
 	p {
 		margin: 1em 0;
 	}
@@ -98,6 +103,18 @@ a.donate {
 			background-color: #F3EBD4;
 			color: #636466;
 		}
+	}
+			
+	&.amanda .ft-page {
+		background: #70be8b url(../img/amanda/background-pattern.png) repeat;
+	}
+
+	&.james .ft-page{
+		background: lightgray url(../img/james/background-pattern.png) repeat;
+	}
+
+	&.dave .ft-page {
+		background: gray url(../img/dave/background-pattern.png) repeat;
 	}
 
 }
@@ -118,4 +135,116 @@ table {
 
 #footer {
 	display:none;
+}
+
+/* Outtro */
+
+.logo-large {
+	height: 20rem;
+	margin: 0 0 2rem 0;
+}
+
+/* Feet */
+
+#feet {
+	position: absolute;
+	top:5rem;
+
+	width: 100%;
+
+	z-index: 500;
+
+	.amanda {
+		width: 30rem;
+		margin: 0 auto;
+		display:block;
+		position: relative;
+		text-align: center;
+		.foot-left, .foot-right {
+			width: 5rem;
+			position:absolute;
+		}
+		.foot-left {
+			top: 2rem;
+			left: 8rem;
+		}
+		.foot-right {
+			top: 2rem;
+			left: 17rem;
+		}
+
+		.dress {
+			width: 30rem;
+			position:absolute;
+			top: -14rem;
+			left: 0;
+		}
+	}
+
+	&.moving {
+		.foot-left {
+			animation: foot-left .3s alternate 6;
+			-moz-animation:foot-left .3s alternate 6; 
+			-webkit-animation: foot-left .3s alternate 6;
+			-o-animation:foot-left .3s alternate 6;
+		}
+		.foot-right {
+			animation:  foot-right .3s alternate 6;
+			-moz-animation: foot-right .3s alternate 6; 
+			-webkit-animation: foot-right .3s alternate 6;
+			-o-animation: foot-right .3s alternate 6;
+		}
+
+		.dress {
+			animation: dress        .3s alternate 6;
+			-moz-animation:dress    .3s alternate 6; 
+			-webkit-animation:dress .3s alternate 6;
+			-o-animation:dress      .3s alternate 6;
+		}
+	}
+}
+
+.flowtime {
+	-webkit-transition: -webkit-transform 2s cubic-bezier(.77, .10, .22, 1);
+            transition:         transform 2s cubic-bezier(.77, .10, .22, 1);
+}
+
+
+@-webkit-keyframes dress{
+	0%{   margin-top:3px;}
+	100%{ margin-top:0px;}
+}
+@-moz-keyframes dress{
+	0%{   margin-top:3px;}
+	100%{ margin-top:0px;}
+}
+@keyframes dress{
+	0%{   margin-top:3px;}
+	100%{ margin-top:0px;}
+}
+
+@-webkit-keyframes foot-left {
+	0%{   margin-top: 7px; margin-left:0px;}
+	100%{ margin-top: 0px; margin-left:5px;}
+}
+@-moz-keyframes foot-left {
+	0%{   margin-top: 7px; margin-left:0px;}
+	100%{ margin-top: 0px; margin-left:5px;}
+}
+@keyframes foot-left {
+	0%{   margin-top: 7px; margin-left:0px;}
+	100%{ margin-top: 0px; margin-left:5px;}
+}
+
+@-webkit-keyframes foot-right{
+	0%{margin-top:-12px; margin-left:50px;}
+	100%{margin-top:5px; margin-left:21px}
+}
+@-moz-keyframes foot-right{
+	0%{margin-top:-12px; margin-left:50px;}
+	100%{margin-top:5px; margin-left:21px}
+}
+@keyframes foot-right{
+	0%{   margin-top:-8px; margin-left:18px; }
+	100%{ margin-top:3px;   margin-left:0px;  }
 }
