@@ -1,0 +1,43 @@
+@import 'header';
+
+
+html {
+	font-size: 10px;
+
+	font-family: Arial, sans-serif;
+	font-style: normal;
+	font-variant: bold;
+
+	color: #F6EAD4;
+}
+
+a {
+	text-decoration: none;
+}
+
+nav a {
+	color: #F6EAD4;
+}
+
+a.donate {
+	display:block;
+	width: 20rem;
+	height: 2rem;
+	line-height: 2rem;
+	background-color: #ED4F39;
+	border-radius: 1rem;
+	border-top: 2px solid transparent;
+	border-bottom: 2px solid transparent;
+	border-left: 1px solid transparent;
+	border-right: 1px solid transparent;
+
+	&:hover {
+		background-color: darken( #ED4F39, 10% );
+	}
+	&:active {
+		border-top: 2px solid darken( #ED4F39, 30% );
+		border-left: 1px solid darken( #ED4F39, 30% );
+		border-right: 1px solid darken( #ED4F39, 30% );
+		line-height: 2.3rem;
+	}
+}
