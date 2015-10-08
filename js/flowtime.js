@@ -1240,6 +1240,9 @@ var Flowtime = (function ()
   var scrollTimeout = NaN;
 
   function onMouseScroll(e) {
+    if ( _isScrollActive === false ) {
+      return;
+    }
     e.preventDefault();
     if (_isScrolling === false && _isScrollActive === true) {
       doScrollOnce(e);
