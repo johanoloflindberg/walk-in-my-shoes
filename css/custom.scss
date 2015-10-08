@@ -11,6 +11,15 @@ html {
 	color: #F6EAD4;
 }
 
+/* Backgrounds */
+
+html {
+	background-color: #646464;
+}
+
+
+/* Buttons */
+
 a {
 	text-decoration: none;
 }
@@ -40,4 +49,11 @@ a.donate {
 		border-right: 1px solid darken( #ED4F39, 30% );
 		line-height: 2.3rem;
 	}
+}
+
+/* Layout */
+
+.inner {
+
+	width: 100%;
 }
