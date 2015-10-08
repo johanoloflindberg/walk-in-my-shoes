@@ -1,0 +1,22 @@
+body {
+	&.amanda, &.james, &.dave {
+		.ft-page {
+			.inner {
+				background-color: #F3EBD4;
+				color: #636466;
+			}
+		}
+	}
+
+	&.amanda .ft-page {
+		background: #70be8b url(../img/amanda/background-pattern.png) repeat;
+	}
+
+	&.james .ft-page{
+		background: lightgray url(../img/james/background-pattern.png) repeat;
+	}
+
+	&.dave .ft-page {
+		background: gray url(../img/dave/background-pattern.png) repeat;
+	}
+}
