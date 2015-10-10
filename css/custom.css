@@ -408,11 +408,11 @@ html {
   font-family: Arial, sans-serif;
   font-style: normal;
   font-variant: bold;
-  color: #F6EAD4; }
-
-/* Backgrounds */
-html {
+  color: #F6EAD4;
   background-color: #646464; }
+
+.ft-default-progress {
+  bottom: 7rem; }
 
 /* Buttons */
 a {
