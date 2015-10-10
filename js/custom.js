@@ -49,19 +49,27 @@ jQuery(document).ready( function( $ ) {
 
 	// Flowtime.onNavigation(onNavigation);
 	var onNavigation = function (e) {
+		var $page;
 
 		setBodyClass();
 		animateFeet();
 
-		console.log( 'section', e.section, 'sectionIndex', e.sectionIndex );
-		console.log( 'page', e.page, 'pageIndex', e.pageIndex );
-		console.log( 'pastSectionIndex', e.pastSectionIndex, 'pastPageIndex', e.pastPageIndex );
-		console.log( 'prevSection', e.prevSection );
-		console.log( 'nextSection', e.nextSection );
-		console.log( 'prevPage', e.prevPage );
-		console.log( 'nextPage', e.nextPage );
+		if ( undefined === e ) {
+			$page = $( 'div.ft-page.actual' );
+		}else {
+			$page = $( e.page );
+		}
+		budget( $page );
 
-		console.log( e );
+		// console.log( 'section', e.section, 'sectionIndex', e.sectionIndex );
+		// console.log( 'page', e.page, 'pageIndex', e.pageIndex );
+		// console.log( 'pastSectionIndex', e.pastSectionIndex, 'pastPageIndex', e.pastPageIndex );
+		// console.log( 'prevSection', e.prevSection );
+		// console.log( 'nextSection', e.nextSection );
+		// console.log( 'prevPage', e.prevPage );
+		// console.log( 'nextPage', e.nextPage );
+
+		// console.log( e );
 	}
 
 	var setBodyClass = function() {
@@ -82,6 +90,22 @@ jQuery(document).ready( function( $ ) {
 		setTimeout( function(){
 			$('#feet').removeClass('moving');
 		}, 2000 );
+	}
+
+	var budget = function( $item ) {
+		var entry = $item.data( 'budget-entry' );
+
+		if ( undefined === entry ) {
+			console.log( "No budget change." );
+			return;
+		}
+
+		console.log( entry );
+
+
+
+
+
 	}
 
 	init();
