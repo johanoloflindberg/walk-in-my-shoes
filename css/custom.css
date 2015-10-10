@@ -7,6 +7,8 @@ header {
   z-index: 100010; }
   header .inner {
     margin: 0 1rem; }
+    header .inner p {
+      text-align: left; }
   header p {
     float: left;
     width: 60%;
@@ -20,20 +22,21 @@ header {
     margin-top: 1rem;
     position: absolute;
     left: 0; }
-  header button {
-    transition: 0.1s transform linear;
-    color: #FFD895;
-    position: relative;
-    float: right;
-    background: 0;
-    height: 3.5rem;
-    width: 3.5rem;
-    padding: 0rem;
-    margin: .6rem 2em 0 0;
-    z-index: 1;
-    outline: 0;
-    border: 0;
-    cursor: pointer; }
+
+button.js-menu {
+  transition: 0.1s transform linear;
+  color: #FFD895;
+  position: relative;
+  float: right;
+  background: 0;
+  height: 3.5rem;
+  width: 3.5rem;
+  padding: 0rem;
+  margin: .6rem 2em 0 0;
+  z-index: 1;
+  outline: 0;
+  border: 0;
+  cursor: pointer; }
 
 .hamburger, .hamburger::before, .hamburger::after {
   transition: 0.2s background linear 0.1s, 0.2s top linear 0.2s, 0.2s transform linear;
@@ -65,14 +68,14 @@ header {
     transition: 0.2s background linear 0.1s, 0.2s top linear, 0.2s transform linear 0.2s; }
 
 nav {
-  width: 250px;
-  height: 500px;
+  width: 25rem;
+  height: 50rem;
   background: #0858A4;
   z-index: 100001;
   position: fixed;
   right: 0;
   top: 0;
-  transform: translateY(-1000px);
+  transform: translateY(-100rem);
   transition: transform 0.6s cubic-bezier(0.56, 0.1, 0.34, 0.91);
   padding-top: 6.2rem; }
   .menu-open nav {
@@ -100,16 +103,71 @@ nav {
   position: fixed;
   bottom: 0;
   background-color: #fff;
-  height: 50px;
-  line-height: 50px;
+  height: 5rem;
+  line-height: 5rem;
   width: 100%;
   z-index: 100010; }
   #footer .inner {
-    margin: 0 1rem;
     font-size: 2.2em;
     font-weight: bold; }
   #footer .name {
-    color: #0858A4; }
+    margin-left: 1rem;
+    color: #0858A4;
+    float: left; }
+  #footer button.js-menu {
+    float: none;
+    cursor: pointer;
+    margin: 0.7rem 0 0 0; }
+    #footer button.js-menu .hamburger, #footer button.js-menu .hamburger::before, #footer button.js-menu .hamburger::after {
+      background: #0858A4; }
+  #footer .active button.js-menu .hamburger {
+    background: 0; }
+  #footer .budget-toggle {
+    float: right;
+    position: relative;
+    padding-left: 4.5rem; }
+    #footer .budget-toggle .left {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 4.5rem; }
+    #footer .budget-toggle .right {
+      padding: 0 1rem;
+      position: relative;
+      background-color: #0858A4;
+      color: #fff;
+      height: 100%;
+      margin: 0;
+      padding: .1rem 1rem 0 1rem; }
+    #footer .budget-toggle .balance-label {
+      font-size: .5em;
+      line-height: .5em;
+      margin: 1rem 0 0 0;
+      font-weight: normal; }
+      #footer .budget-toggle .balance-label span {
+        display: inline-block;
+        display: none;
+        transition: 0.3s transform linear; }
+    #footer .budget-toggle.open .balance-label span {
+      transform: rotate(180deg); }
+    #footer .budget-toggle .var-budget {
+      min-width: 8rem;
+      margin-top: -.5rem; }
+
+#budget-table {
+  width: 25rem;
+  height: 30rem;
+  background: #F3EAD4;
+  z-index: 100001;
+  position: fixed;
+  top: auto;
+  right: 0;
+  bottom: -35rem;
+  transform: translateY(0);
+  transition: transform 0.6s cubic-bezier(0.56, 0.1, 0.34, 0.91);
+  padding-top: 6.2rem; }
+  .budget-open #budget-table {
+    transform: translateY(-40rem); }
 
 /* Feet */
 #feet .amanda, #feet .james, #feet .dave {

@@ -1,8 +1,10 @@
 jQuery(document).ready( function( $ ) {
 
 	var 
-		$menuToggles = $('button.js-menu, div.flowtime, nav a'),
-		$menuButton = $('button.js-menu');
+		$menuToggles = $('header button, div.flowtime, nav a'),
+		$menuButton = $('header button'),
+		$budgetToggles = $('#footer .budget-toggle, div.flowtime'),
+		$budgetButton = $('#footer .budget-toggle');
 
 	var init = function () {
 
@@ -10,6 +12,7 @@ jQuery(document).ready( function( $ ) {
 		Flowtime.start();
 
 		$menuToggles.click( toggleMenu );
+		$budgetToggles.click( toggleBudget );
 
 		Flowtime.addEventListener("flowtimenavigation", onNavigation, false);
 		onNavigation();
@@ -45,6 +48,20 @@ jQuery(document).ready( function( $ ) {
 		}
 
 	};
+
+	var toggleBudget = function() {
+		if ( $budgetButton.hasClass( 'active' ) ) {
+
+			$budgetButton.removeClass('active');
+			$('body').removeClass('budget-open');
+
+		} else if ( ! $( this ).hasClass('flowtime') ) {
+
+			$budgetButton.addClass('active');
+			$('body').addClass('budget-open');
+			
+		}
+	}
 
 
 	// Flowtime.onNavigation(onNavigation);
