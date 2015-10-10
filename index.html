@@ -206,7 +206,7 @@
 
 					<h2>My name is James.</h2>
 
-					<p>I am 75 years old. I am a retired widower, and I don&#x27;t have any family left in Alaska. I live on a fixed income in an apartment,and I rely on public Transportation.</p>
+					<p>I am 75 years old. I am a retired widower, and I don&#x27;t have any family left in Alaska. I live in an apartment, have a fixed income, and rely on public transportation.</p>
 
 					<p>Monthly Income: $1,800</p>
 
@@ -227,7 +227,7 @@
 						</tbody>
 					</table>	
 
-					<a href="#/james/2" class="button">[[James February 1]]</a>
+					<a href="#/james/2" class="button">Start</a>
 
 				</div>
 			</div>
@@ -244,7 +244,7 @@
 
 					<p>Subtract $1100 from your budget.<p>
 
-					<a href="#/james/3" class="button">[[James February 4]]</a>
+					<a href="#/james/3" class="button">continue</a>
 				</div>
 			</div>
 		</div>
@@ -256,8 +256,15 @@
 
 					<p>It is increasingly difficult for you to navigate stairs. Unfortunately, you live in a second story apartment. You can:<p>
 
-					<a href="#/james/4a" class="button">[[Remain in your apartment and hire a caretaker.]] </a>
-					<a href="#/james/4b" class="button">[[Rent a more expensive ground floor apartment.]]</a>
+					<p>
+						<ul class="choices">
+							<li>Remain in your apartment and hire a caretaker.</li>
+							<li>Rent a more expensive ground-floor apartment.</li>
+						</ul>
+					</p>
+
+					<a href="#/james/4a" class="button">Caretaker</a>
+					<a href="#/james/4b" class="button">Apartment</a>
 
 				</div>
 			</div>
@@ -268,9 +275,13 @@
 				<div class="innerer">
 					<h2>Remain in your apartment and hire a caretaker</h2>
 
-					<p>The caretaker costs $300 per month, subtract that from your budget.</p>
+					<p>The caretaker costs $300 per month.</p>
 
-					<a href="#/james/5" class="button">[[James February 8]]</a>
+					-$300
+
+					<p>Subtract $300 from your budget.</p>
+
+					<a href="#/james/5" class="button">Continue</a>
 				</div>
 			</div>
 		</div>
@@ -280,9 +291,13 @@
 				<div class="innerer">
 					<h2>Rent a more expensive ground floor apartment</h2>
 
-					<p>The new apartment costs $150 more than your previous apartment, subtract $150 from your budget.</p>
+					<p>The new apartment costs $150 more than your previous apartment.</p>
 
-					<a href="#/james/5" class="button">[[James February 8]]</a>
+					-$150
+
+					<p>Subtract $150 from your budget.</p>
+
+					<a href="#/james/5" class="button">Continue</a>
 				</div>
 			</div>
 		</div>
@@ -296,9 +311,9 @@
 
 					-$200
 
-					<p>Subtract $200 from your budget</p>
+					<p>Subtract $200 from your budget.</p>
 
-					<a href="#/james/6" class="button">[[James February 15]]</a>
+					<a href="#/james/6" class="button">Continue</a>
 				</div>
 			</div>
 		</div>
@@ -312,8 +327,13 @@
 
 					<p>You can: </p>
 
-					<a href="#/james/7a" class="button">[[See a more expensive doctor whose office is accessible via bus.]]</a>
-					<a href="#/james/7b" class="button">[[Risk relying on a friend for regular transportation to your health center]]</a>
+					<ul class="choices">
+						<li>See a more expensive doctor whose office is accessible via bus.</li>
+						<li>Risk relying on a friend for regular transportation to your health center.</li>
+					</ul>
+
+					<a href="#/james/7a" class="button">Doctor</a>
+					<a href="#/james/7b" class="button">Friend</a>
 
 				</div>
 			</div>
@@ -322,11 +342,13 @@
 		<div id="/james/7a" class="ft-page" data-id="7a">
 			<div class="inner">
 				<div class="innerer">
-					<h2>See a more expensive doctor whose office is accessible via bus</h2>
+					<h2>See a more expensive doctor whose office is accessible via bus.</h2>
 
 					 -$150
+
+					 <p>Subtract $150 from your budget.</p>
  
-					 <a href="#/james/8" class="button">[[James February 19]]</a>
+					 <a href="#/james/8" class="button">Continue</a>
 				</div>
 			</div>
 		</div>
@@ -335,38 +357,48 @@
 			<div class="inner">
 				<div class="innerer">
 					
-					<h2>Risk relying on a friend for regular transportation to your health center</h2>
+					<h2>Risk relying on a friend for regular transportation to your health center.</h2>
 
 					<ul class="risk">
 						<li>
-							Your friend reliably drives you to your doctor appointments.  Your budget stays the same.
+							<p>Your friend reliably drives you to your doctor appointments.  Your budget stays the same.</p>
 
-							<a href="#/james/8" class="button">[[James February 19]] </a>
+							<a href="#/james/8" class="button">Continue</a>
 						</li>
 						<li>
-							Your friend fails to drive you to the doctor, so you spend $50 for a taxi ride to the doctor.  You then decide to try a new doctor who is on the bus route, but charges $150 more than Medicaid will cover.  Subtract $200 from your budget.
+							<p>Your friend fails to drive you to the doctor, so you spend $50 for a taxi ride to the doctor.  You then decide to try a new doctor who is on the bus route, but charges $150 more than Medicaid will cover.  Subtract $200 from your budget.</p>
 
-							<a href="#/james/8" class="button">[[James February 19]]</a>
+							-$200
+
+							<a href="#/james/8" class="button">Continue</a>
 						</li>
 						<li>
-							Your friend drives you to one appointment, but cancels for the second. You must pay for round trip taxi to make that appointment.  Subtract $50 from your budget.
+							<p>Your friend drives you to one appointment, but cancels for the second. You must pay for round trip taxi to make that appointment.  Subtract $50 from your budget.</p>
 
-							<a href="#/james/8" class="button">[[James February 19]]</a>
+							-$50
+
+							<a href="#/james/8" class="button">Continue</a>
 						</li>
 						<li>
-							Your friend fails to drive you to the doctor, so you spend $50 for a taxi ride to the doctor.  You then decide to try a new doctor who is on the bus route, but charges $150 more than Medicaid will cover.  Subtract $200 from your budget.
+							<p>Your friend fails to drive you to the doctor, so you spend $50 for a taxi ride to the doctor.</p>
 
-							<a href="#/james/8" class="button">[[James February 19]]</a>
+							<p>You then decide to try a new doctor who is on the bus route, but charges $150 more than Medicaid will cover.  Subtract $200 from your budget.</p>
+
+							-$200
+
+							<a href="#/james/8" class="button">Continue</a>
 						</li>
 						<li>
-							Your friend drives you to one appointment, but cancels for the second. You must pay for round trip taxi to make that appointment.  Subtract $50 from your budget.
+							<p>Your friend drives you to one appointment, but cancels for the second. You must pay for round trip taxi to make that appointment.  Subtract $50 from your budget.</p>
 
-							<a href="#/james/8" class="button">[[James February 19]]</a>
+							-$50
+
+							<a href="#/james/8" class="button">Continue</a>
 						</li>
 						<li>
-							Your friend reliably drives you to your doctor appointments.  Your budget stays the same.
+							<p>Your friend reliably drives you to your doctor appointments.  Your budget stays the same.</p>
 
-							<a href="#/james/8" class="button">[[James February 19]]</a>
+							<a href="#/james/8" class="button">Continue</a>
 						</li>
 					</ul>
 
@@ -385,7 +417,7 @@
 
 					<p>Add $100 to your budget.</p>
 
-					<a href="#/james/9" class="button">[[James February 22]]</a>
+					<a href="#/james/9" class="button">Continue</a>
 				</div>
 			</div>
 		</div>
@@ -397,8 +429,15 @@
 
 					<p>Medicare will only cover half the cost of a new prescription you need. You can:</p>
 
-					<a href="#/james/10a" class="button">[[Cover the other half out of pocket]]</a>
-					<a href="#/james/10b" class="button">[[Risk becoming sick by only taking half the dosage]]</a>
+					<p>
+						<ul class="choices">
+							<li>Pay the other half out-of-pocket.</li>
+							<li>Risk becoming sick by only taking half the dosage.</li>
+						</ul>
+					</p>
+
+					<a href="#/james/10a" class="button">Pay</a>
+					<a href="#/james/10b" class="button">Risk</a>
 				</div>
 			</div>
 		</div>
@@ -412,7 +451,7 @@
 
 					<p>Subtract $200 from your budget.</p>
 
-					<a href="#/james/11" class="button">[[James February 28]] </a>
+					<a href="#/james/11" class="button">Continue</a>
 				</div>
 			</div>
 		</div>
@@ -420,47 +459,54 @@
 		<div id="/james/10b" class="ft-page risk-card" data-id="10b">
 			<div class="inner">
 				<div class="innerer">
+					<h2>Risk becoming sick by only taking half the dosage</h2>
+
 					<ul class="risk">
-
-						<h2>Risk becoming sick by only taking half the dosage</h2>
-
 						<li>
 							<p>Taking half your dosage does nothing and you have to visit your doctor again, who convinces you to purchase the full dosage.  </p>
 
 							<p>Subtract $200 from your budget.</p>
 
-							<a href="#/james/11" class="button">[[James February 28]]</a>
+							-$200
+
+							<a href="#/james/11" class="button">Continue</a>
 						</li>
 						<li>
 							<p>Taking half your dosage worsens, rather than helps, your condition and you have to spend the night in the hospital. </p>
 
 							<p>Subtract $500 for your hospital stay.</p>
 
-							<a href="#/james/11" class="button">[[James February 28]]</a>
+							-$500
+
+							<a href="#/james/11" class="button">Continue</a>
 						</li>
 						<li>
 							<p>Taking half your dosage worsens, rather than helps, your condition and you have to spend the night in the hospital. </p>
 
 							<p>Subtract $500 for your hospital stay.</p>
 
-							<a href="#/james/11" class="button">[[James February 28]]</a>
+							-$500
+
+							<a href="#/james/11" class="button">Continue</a>
 						</li>
 						<li>
 							<p>Taking half your dosage does nothing and you have to visit your doctor again, who convinces you to purchase the full dosage.  </p>
 
-							<p>Subtract $200 from your budget.
+							<p>Subtract $200 from your budget.</p>
 
-							<a href="#/james/11" class="button">[[James February 28]]</a></p>
+							-$200
+
+							<a href="#/james/11" class="button">Continue</a></p>
 						</li>
 						<li>
 							<p>Your condition is alleviated with just the half dosage of the prescription. Your budget stays the same.</p>
 
-							<a href="#/james/11" class="button">[[James February 28]]</a>
+							<a href="#/james/11" class="button">Continue</a>
 						</li>
 						<li>
 							<p>Your condition is alleviated with just the half dosage of the prescription. Your budget stays the same.</p>
 
-							<a href="#/james/11" class="button">[[James February 28]]</a>
+							<a href="#/james/11" class="button">Continue</a>
 						</li>
 					</ul>
 				</div>
@@ -479,7 +525,7 @@
 
 					<p>Subtract $200 from your budget.</p>
 
-					<a href="#/james/12" class="button">[[James Conclusion]]</a>
+					<a href="#/james/12" class="button">Continue</a>
 
 				</div>
 			</div>
@@ -500,17 +546,15 @@
 	</div>
 
 	<div class="ft-section amanda" data-id="amanda">
-
-
 		
 		<div id="/amanda/1" class="ft-page" data-id="1">
 
 			<div class="inner">
 				<div class="innerer">
 
-					<h2>My Name is Amanda.</h2>
+					<h2>My name is Amanda.</h2>
 
-					<p>I am 23 years old. I dropped out of high school when I found out I was pregnant with my son, who is now six. I work a part-time job as a server at a restaurant.</p>
+					<p>I am 23-years-old. I dropped out of high school when I found out I was pregnant with my son, who is now six. I work a part-time job as a server at a restaurant.</p>
 
 					<p>Monthly income: $2,000</p>
 
@@ -531,7 +575,7 @@
 						</tbody>
 					</table>
 
-					<a href="#/amanda/2" class="button">[[Amanda February 1]]</a>
+					<a href="#/amanda/2" class="button">Start</a>
 
 				</div>
 			</div>
@@ -549,7 +593,7 @@
 
 					<p>Subtract $1500 from your budget.</p>
 
-					<a href="#/amanda/3" class="button">[[Amanda February 4]]</a>
+					<a href="#/amanda/3" class="button">Continue</a>
 				</div>
 			</div>
 		</div>
@@ -560,12 +604,10 @@
 
 					<h2>February 4</h2>
 
-					<p>You are offered full-time hours at the restaurant where you work. Which shift do you request? </p>
+					<p>You are offered full-time hours at the restaurant where you work. Which shift do you request?</p>
 
-					<p>You can:</p>
-
-					<a href="#/amanda/4a" class="button">[[option A]]</a>
-					<a href="#/amanda/4b" class="button">[[option B]]</a>
+					<a href="#/amanda/4a" class="button">Lunch</a>
+					<a href="#/amanda/4b" class="button">Dinner</a>
 
 				</div>
 			</div>
@@ -575,11 +617,15 @@
 			<div class="inner">
 				<div class="innerer">
 					
-					<h2>Option A</h2>
+					<h2>Lunch Shift</h2>
 
-					<p>Work the lunch shift.  You will earn less in tips, but your son will be in school during most of your work hours. You make an extra $1000 working the lunch shift, but now you need 2 daily hours of childcare for your son costing $200 per month, add $800 to your budget. </p>
+					<p>You work the Lunch shift.  You will earn less in tips, but your son will be in school during most of your work hours. You make an extra $1000, but now you need 2 daily hours of childcare for your son, costing $200 per month.</p>
 
-					<a href="#/amanda/5" class="button">[[Amanda February 8]] </a>
+					<p>Add $800 to your budget.</p>
+
+					+$800
+
+					<a href="#/amanda/5" class="button">Continue</a>
 
 				</div>
 			</div>
@@ -589,13 +635,17 @@
 			<div class="inner">
 				<div class="innerer">
 			
-					<h2>Option B</h2>
+					<h2>Dinner</h2>
 
-					<p>Work the dinner shift.  You will earn more in tips, but will have to pay for evening childcare. </p>
+					<p>You work the dinner shift. You will earn more in tips, but will have to pay for evening childcare. </p>
 
-					<p>You make an extra $1500 working the dinner shift, but now you need 8 daily hours of childcare for yourson each shift costing $800 per month, add $700 to your budget.</p>
+					<p>You make an extra $1500, but now you need 8 daily hours of childcare for your son, costing $800 per month.</p>
 
-					<a href="#/amanda/5" class="button">[[Amanda February 8]]</a>
+					<p>Add $700 to your budget.</p>
+
+					+$700
+
+					<a href="#/amanda/5" class="button">Continue</a>
 
 				</div>
 			</div>
@@ -613,7 +663,7 @@
 
 					<p>Subtract $200 from your budget.</p>
 
-					<a href="#/amanda/6" class="button">[[Amanda February 15]]</a>
+					<a href="#/amanda/6" class="button">Continue</a>
 
 				</div>
 			</div>
@@ -629,8 +679,15 @@
 
 					<p>You can:</p>
 
-					<a href="#/amanda/7a" class="button">[[Take your car to a mechanic to be fixed.]]</a>
-					<a href="#/amanda/7b" class="button">[[Risk not fixing your car]]</a>
+					<p>
+						<ul>
+							<li>Take your car to a mechanic to be fixed.</li>
+							<li>Risk not fixing your car.</li>
+						</ul>
+					</p>
+
+					<a href="#/amanda/7a" class="button">Fix</a>
+					<a href="#/amanda/7b" class="button">Risk</a>
 				</div>
 			</div>
 		</div>
@@ -645,7 +702,7 @@
 
 					<p>Subtract $500 from your budget.</p>
 
-					<a href="#/amanda/8" class="button">[[Amanda February 19]]</a>
+					<a href="#/amanda/8" class="button">Continue</a>
 				</div>
 			</div>
 		</div>
@@ -658,42 +715,54 @@
 
 					<ul class="risk">
 						<li>
-							<p>Your car makes it through the month without breaking down.  Your budget stays the same.</p>
+							<p>Your car makes it through the month without breaking down.</p>
 
-							<a href="#/amanda/8" class="button">[[Amanda February 19]]</a>
+							<p>Your budget stays the same.</p>
+
+							<a href="#/amanda/8" class="button">Continue</a>
 						</li>
 						<li>
-							<p>You find a friend who will fix it for cheaper than the shop.  </p>
+							<p>You find a friend who will fix it for cheaper than the shop.</p>
 
 							<p>Subtract $300 from your budget.</p>
 
-							<a href="#/amanda/8" class="button">[[Amanda February 19]]</a>
-						</li>
-						<li>
-							<p>Your car makes it through the month without breaking down.  Your budget stays the same.</p>
+							-$300
 
-							<a href="#/amanda/8" class="button">[[Amanda February 19]] </a>
+							<a href="#/amanda/8" class="button">Continue</a>
 						</li>
 						<li>
-							<p>Your car breaks down on the road.  You have to pay to have it fixed plus the extra for the tow. </p>
+							<p>Your car makes it through the month without breaking down.</p>
+
+							<p>Your budget stays the same.</p>
+
+							<a href="#/amanda/8" class="button">Continue</a>
+						</li>
+						<li>
+							<p>Your car breaks down on the road. You have to pay to have it fixed plus the extra for the tow. </p>
  
 							<p>Subtract $600 from your budget.</p>
 
-							<a href="#/amanda/8" class="button">[[Amanda February 19]] </a>
+							-$600
+
+							<a href="#/amanda/8" class="button">Continue</a>
 						</li>
 						<li>
-							<p>You find a friend who will fix it for cheaper than the shop.  </p>
+							<p>You find a friend who will fix it for cheaper than the shop.</p>
 
 							<p>Subtract $300 from your budget.</p>
 
-							<a href="#/amanda/8" class="button">[[Amanda February 19]] </a>
+							-$300
+
+							<a href="#/amanda/8" class="button">Continue</a>
 						</li>
 						<li>
-							<p>Your car breaks down on the road.  You have to pay to have it fixed plus the extra for the tow. </p>
+							<p>Your car breaks down on the road.  You have to pay to have it fixed plus the extra for the tow.</p>
 
 							<p>Subtract $600 from your budget.</p>
 
-							<a href="#/amanda/8" class="button">[[Amanda February 19]] </a>
+							-$600
+
+							<a href="#/amanda/8" class="button">Continue</a>
 						</li>
 					</ul>
 				</div>
@@ -706,13 +775,13 @@
 
 					<h2>February 19</h2>
 
-					<p>You decide to take the GED prep classes at 9 Star Employment Services.</p>
+					<p>You decide to take the GED prep classes at 9-star Employment Services.</p>
 
 					-$25
 
 					<p>Subtract $25 from your budget.</p>
 
-					<a href="#/amanda/9" class="button">[[Amanda February 22]]</a>
+					<a href="#/amanda/9" class="button">Continue</a>
 				</div>
 			</div>
 		</div>
@@ -727,8 +796,15 @@
 
 					<p>You can:</p>
 
-					<a href="#/amanda/10a" class="button">[[Give up your car, and use the money you normally spend on the car payment for the </a>insurance premium. Your budget is even.]]
-					<a href="#/amanda/10b" class="button">[[Risk not having health insurance.]]</a>
+					<p>
+						<ul>
+							<li>Give up your car, and use the money you normally spend on the car payment for the insurance premium.</li>
+							<li>Risk not having health insurance.</li>
+						</ul>
+					</p>
+
+					<a href="#/amanda/10a" class="button">Give up Car</a>
+					<a href="#/amanda/10b" class="button">Risk</a>
 
 
 				</div>
@@ -741,9 +817,9 @@
 					
 					<h2>Give up your car, and use the money you normally spend on the car payment for the insurance premium.</h2>
 
-					<p>Your budget is even.</p>
+					<p>Your budget stays the same.</p>
 
-					<a href="#/amanda/11" class="button">[[Amanda February 28]]</a>
+					<a href="#/amanda/11" class="button">Continue</a>
 
 				</div>
 			</div>
@@ -757,34 +833,54 @@
 
 					<ul class="risk">
 						<li>
-							You get strep throat and have to miss work to go to the doctor for medicine.  Subtract $250 from your budget.
+							<p>You get strep throat and have to miss work to go to the doctor for medicine.</p>
 
-							<a href="#/amanda/11" class="button">[[Amanda February 28]]</a>
+							<p>Subtract $250 from your budget.</p>
+
+							-$250
+
+							<a href="#/amanda/11" class="button">Continue</a>
 						</li>
 						<li>
-							You crack a tooth this month. Subtract $450 from your budget.
+							<p>You crack a tooth this month.</p>
 
-							<a href="#/amanda/11" class="button">[[Amanda February 28]] </a>
+							<p>Subtract $450 from your budget.</p>
+
+							-$450
+
+							<a href="#/amanda/11" class="button">Continue</a>
 						</li>
 						<li>
-							 You stay healthy this month, your budget stays the same.
+							<p>You stay healthy this month.</p>
+
+							<p>Your budget stays the same.</p>
  
-							<a href="#/amanda/11" class="button">[[Amanda February 28]] </a>
+							<a href="#/amanda/11" class="button">Continue</a>
 						</li>
 						<li>
-							You crack a tooth this month. Subtract $450 from your budget.
+							<p>You crack a tooth this month.</p>
 
-							<a href="#/amanda/11" class="button">[[Amanda February 28]] </a>
+							<p>Subtract $450 from your budget.</p>
+
+							-$450
+
+							<a href="#/amanda/11" class="button">Continue</a>
 						</li>
 						<li>
-							You get strep throat and have to miss work to go to the doctor for medicine.  Subtract $250 from your budget.
+							<p>You get strep throat and have to miss work to go to the doctor for medicine.</p>
 
-							<a href="#/amanda/11" class="button">[[Amanda February 28]] </a>
+							<p>Subtract $250 from your budget.</p>
+
+							-$250
+
+							<a href="#/amanda/11" class="button">Continue</a>
 						</li>
 						<li>
-							You stay healthy this month, your budget stays the same.
+							<p>You stay healthy this month.</p>
 
-							<a href="#/amanda/11" class="button">[[Amanda February 28]] </a>
+							<p>Your budget stays the same.</p>
+
+							<a href="#/amanda/11" class="button">Continue</a>
 						</li>
 					</ul>
 				</div>
@@ -803,7 +899,7 @@
 
 					<p>Subtract $300 from your budget.</p>
 
-					<a href="#/amanda/12" class="button">[[Amanda Conclusion]]</a>
+					<a href="#/amanda/12" class="button">Continue</a>
 
 				</div>
 			</div>
@@ -829,7 +925,7 @@
 			<div class="inner">
 				<div class="innerer">
 					
-					<h2>My Name is Dave</h2>
+					<h2>My name is Dave</h2>
 
 					<p>I am 42 years old. When a disability forced me into early retirement, my wife picked up a part-time job. Still, our mortgage, my medical bills and the needs of our three kids make it difficult to make ends meet.</p>
 
@@ -858,7 +954,7 @@
 					</table>
 
 
-					<a href="#/dave/2" class="button">[[Dave February 1]]</a>
+					<a href="#/dave/2" class="button">Start</a>
 				</div>
 			</div>
 		</div>
@@ -875,7 +971,7 @@
 
 					<p>Subtract $2,000 from your budget.</p>
 
-					<a href="#/dave/3" class="button">[[Dave February 4]]</a>
+					<a href="#/dave/3" class="button">Continue</a>
 				</div>
 			</div>
 		</div>
@@ -886,12 +982,19 @@
 					
 					<h2>February 4</h2>
 
-					<p>Your physical therapy sessions are before your wife can return from work to watch your youngest child. </p>
+					<p>Your physical therapy sessions are before your wife can return from work to watch your youngest child.</p>
 
 					<p>You can:</p>
 
-					<a href="#/dave/4a" class="button">[[Dave Option A]]</a>
-					<a href="#/dave/4b" class="button">[[Dave Option B]]</a>
+					<p>
+						<ul>
+							<li>Ask your wife to leave work early</li>
+							<li>Pay extra for in-home physical therapy sessions</li>
+						</ul>
+					</p>
+
+					<a href="#/dave/4a" class="button">Ask</a>
+					<a href="#/dave/4b" class="button">Pay</a>
 				</div>
 			</div>
 		</div>
@@ -900,11 +1003,15 @@
 			<div class="inner">
 				<div class="innerer">
 					
-					<h2>Option A</h2>
+					<h2>Ask your wife to leave work early</h2>
 
-					<p>Ask your wife to leave work early; she can watch the kid while you’re at physical therapy. Your wife takes unpaid time off of work and her pay is reduced by $300 per month, subtract $300 from your budget.</p>
+					<p>You ask your wife to watch the kids while you’re at physical therapy. Your wife takes unpaid time off of work and her pay is reduced by $300 per month.</p>
 
-					<a href="#/dave/5" class="button">[[Dave February 8]]</a>
+					<p>Subtract $300 from your budget.</p>
+
+					-$300
+
+					<a href="#/dave/5" class="button">Continue</a>
 				</div>
 			</div>
 		</div>
@@ -913,11 +1020,15 @@
 			<div class="inner">
 				<div class="innerer">
 					
-					<h2>Option B</h2>
+					<h2>Pay extra for in-home physical therapy sessions.</h2>
 
-					<p>Pay extra for in-home physical therapy sessions. In-home therapy sessions cost an extra $400 per month, subtract $400 from your budget. </p>
+					<p>In-home therapy sessions cost an extra $400 per month.</p>
 
-					<a href="#/dave/5" class="button">[[Dave February 8]]</a>
+					<p>Subtract $400 from your budget.</p>
+
+					-$400
+
+					<a href="#/dave/5" class="button">Continue</a>
 				</div>
 			</div>
 		</div>
@@ -930,9 +1041,11 @@
 
 					<p>You save on your monthly grocery bill by going to a local food pantry.</p>
 
-					<p>Your budget stays the same.</p>
+					<p>Add $50 to your budget.</p>
 
-					<a href="#/dave/6" class="button">[[Dave February 15]]</a>
+					+$50
+
+					<a href="#/dave/6" class="button">Continue</a>
 				</div>
 			</div>
 		</div>
@@ -943,13 +1056,20 @@
 					
 					<h2>February 15</h2>
 
-					<p>You do your family taxes at an AARP free tax preparation site and qualify for the Earned Income Tax Credit. In anticipation of a tax refund next month, you debate delaying veterinary attenction for your beloved dog, Jake, who has developed a mysterious growth. </p>
+					<p>You do your family taxes at an AARP free tax preparation site and qualify for the Earned Income Tax Credit. In anticipation of a tax refund next month, you debate delaying veterinary attention for your beloved dog, Jake, who has developed a mysterious growth. </p>
 
 					<p>You can: </p>
 
-					<a href="#/dave/7a" class="button">[[Take Jake to the vet.]]</a>
+					<p>
+						<ul>
+							<li>Take Jake to the vet.</li>
+							<li>Risk it and delay taking Jake to the vet until you receive your tax refund.</li>
+						</ul>
+					</p>
 
-					<a href="#/dave/7b" class="button">[[Risk it and delay taking Jake to the vet until you receive your tax refund.]]</a>
+					<a href="#/dave/7a" class="button">Save Jake!</a>
+
+					<a href="#/dave/7b" class="button">Risk it</a>
 				</div>
 			</div>
 		</div>
@@ -960,9 +1080,11 @@
 					
 					<h2>Take Jake to the vet</h2>
 
+					<p>Subtract $200 from your budget.</p>
+
 					-$200
 
-					<a href="#/dave/8" class="button">[[Dave February 19]]</a>
+					<a href="#/dave/8" class="button">Continue</a>
 				</div>
 			</div>
 		</div>
@@ -975,46 +1097,54 @@
 
 					<ul class="risk">
 						<li>
-							<p>Jake’s condition worsens and you are compelled to take him to the vet anyway. The delay in taking Jake to the vet allowed the growth to develop into a more expensive problem.  </p>
+							<p>Jake’s condition worsens and you are compelled to take him to the vet anyway. The delay in taking Jake to the vet allowed the growth to develop into a more expensive problem.</p>
 
 							<p>Subtract $300 from your budget.</p>
 
-							<a href="#/dave/8" class="button">[[Dave February 19]]</a>
+							-$300
+
+							<a href="#/dave/8" class="button">Continue</a>
 						</li>
 						<li>
 							<p>Jake’s condition worsens and you are compelled to take him to the vet anyway. At the vet Jake receives treatment for $200.  </p>
 
 							<p>Subtract $200 from your budget.</p>
 
-							<a href="#/dave/8" class="button">[[Dave February 19]] </a>
+							-$200
+
+							<a href="#/dave/8" class="button">Continue</a>
 						</li>
 						<li>
-							<p>While waiting for your tax refund to afford taking Jake to the vet, the mysterious growth disappears. You no longer need to take him to the vet. </p>
+							<p>While waiting for your tax refund to afford taking Jake to the vet, the mysterious growth disappears. You no longer need to take him to the vet.</p>
 
 							<p>Your budget stays the same.</p>
 
-							<a href="#/dave/8" class="button">[[Dave February 19]] </a>
+							<a href="#/dave/8" class="button">Continue</a>
 						</li>
 						<li>
 							 <p>While waiting for your tax refund to afford taking Jake to the vet, the mysterious growth disappears. You no longer need to take him to the vet. </p>
 
 							 <p>Your budget stays the same.</p>
  
-							<a href="#/dave/8" class="button">[[Dave February 19]] </a>
+							<a href="#/dave/8" class="button">Continue</a>
 						</li>
 						<li>
-							 <p>Jake’s condition worsens and you are compelled to take him to the vet anyway. The delay in taking Jake to the vet allowed the growth to develop into a more expensive problem.  </p>
+							 <p>Jake’s condition worsens and you are compelled to take him to the vet anyway. The delay in taking Jake to the vet allowed the growth to develop into a more expensive problem.</p>
 
 							 <p>Subtract $300 from your budget.</p>
+
+							 -$300
  
-							<a href="#/dave/8" class="button">[[Dave February 19]] </a>
+							<a href="#/dave/8" class="button">Continue</a>
 						</li>
 						<li>
-							<p>Jake’s condition worsens and you are compelled to take him to the vet anyway. At the vet Jake receives treatment for $200.  </p>
+							<p>Jake’s condition worsens and you are compelled to take him to the vet anyway. At the vet Jake receives treatment for $200.</p>
 
 							<p>Subtract $200 from your budget.</p>
 
-							<a href="#/dave/8" class="button">[[Dave February 19]] </a>
+							-$200
+
+							<a href="#/dave/8" class="button">Continue</a>
 						</li>
 					</ul>
 				</div>
@@ -1027,13 +1157,13 @@
 					
 					<h2>February 19</h2>
 
-					<p>Your middle child breaks their ankle during a school basketball game. </p>
+					<p>Your middle child breaks their ankle during a school basketball game.</p>
 
 					-$400
 
 					<p>Subtract $400 from your budget.</p>
 
-					<a href="#/dave/9" class="button">[[Dave February 22]]</a>
+					<a href="#/dave/9" class="button">Continue</a>
 				</div>
 			</div>
 		</div>
@@ -1044,12 +1174,19 @@
 
 					<h2>February 22</h2>
 
-					<p>As the temperature drops during a cold snap, you become concerned that your pipes will freeze. </p>
+					<p>As the temperature drops during a cold snap, you become concerned that your pipes will freeze.</p>
 
 					<p>You can:</p>
 
-					<a href="#/dave/10a" class="button">[[Pay to have your pipes insulated.]]</a>
-					<a href="#/dave/10b" class="button">[[Risk no action and hope your pipes don't freeze!]]</a>
+					<p>
+						<ul>
+							<li>Pay to have your pipes insulated.</li>
+							<li>Risk no action and hope your pipes don't freeze!</li>
+						</ul>
+					</p>
+
+					<a href="#/dave/10a" class="button">Pay</a>
+					<a href="#/dave/10b" class="button">Risk</a>
 				</div>
 			</div>
 		</div>
@@ -1060,9 +1197,11 @@
 					
 					<h2>Pay to have your pipes insulated.</h2>
 
+					<p>Subtract $200 from your budget.</p>
+
 					-$200
 
-					<a href="#/dave/11" class="button">[[Dave February 28]]</a>
+					<a href="#/dave/11" class="button">Continue</a>
 				</div>
 			</div>
 		</div>
@@ -1075,46 +1214,54 @@
 
 					<ul class="risk">
 						<li>
-							 <p>Your pipes freeze and it costs you $400 to have them fixed.  </p>
+							 <p>Your pipes freeze and it costs you $400 to have them fixed.</p>
 
-							 <p>Subtract $400 from your budget. </p>
+							 <p>Subtract $400 from your budget.</p>
+
+							 -$400
  
-							<a href="#/dave/11" class="button">[[Dave February 28]] </a>
+							<a href="#/dave/11" class="button">Continue</a>
 						</li>
 						<li>
-							 <p>Your pipes are fine.  </p>
+							 <p>Your pipes are fine.</p>
 
 							 <p>Your budget stays the same.</p>
  
-							<a href="#/dave/11" class="button">[[Dave February 28]] </a>
+							<a href="#/dave/11" class="button">Continue</a>
 						</li>
 						<li>
-							<p>Your pipes freeze and it costs you $400 to have them fixed.  </p>
+							<p>Your pipes freeze and it costs you $400 to have them fixed.</p>
 
-							<p>Subtract $400 from your budget. </p>
+							<p>Subtract $400 from your budget.</p>
 
-							<a href="#/dave/11" class="button">[[Dave February 28]] </a>
+							-$400
+
+							<a href="#/dave/11" class="button">Continue</a>
 						</li>
 						<li>
-							<p>Your pipes freeze and burst which costs $700 to have fixed.  </p>
+							<p>Your pipes freeze and burst which costs $700 to have fixed.</p>
 
 							<p>Subtract $700 from your budget.</p>
 
-							<a href="#/dave/11" class="button">[[Dave February 28]] </a>
+							-$700
+
+							<a href="#/dave/11" class="button">Continue</a>
 						</li>
 						<li>
-							<p>Your pipes freeze and burst which costs $700 to have fixed.  </p>
+							<p>Your pipes freeze and burst which costs $700 to have fixed.</p>
 
 							<p>Subtract $700 from your budget.</p>
 
-							<a href="#/dave/11" class="button">[[Dave February 28]] </a>
+							-$700
+
+							<a href="#/dave/11" class="button">Continue</a>
 						</li>
 						<li>
-							<p>Your pipes are fine.  </p>
+							<p>Your pipes are fine.</p>
 
-							<p>Your budget stays the same. </p>
+							<p>Your budget stays the same.</p>
 
-							<a href="#/dave/11" class="button">[[Dave February 28]] </a>
+							<a href="#/dave/11" class="button">Continue</a>
 						</li>
 					</ul>
 				</div>
@@ -1133,7 +1280,7 @@
 
 					<p>Subtract $450 from your budget.</p>
 
-					<a href="#/dave/" class="button">[[Dave Conclusion]]</a>
+					<a href="#/dave/" class="button">Continue</a>
 				</div>
 			</div>
 		</div>
@@ -1172,62 +1319,9 @@
 
 </div>
 
-
 <script src="js/brav1toolbox.js"></script>
 <script src="js/flowtime.js"></script>
 <script src="js/custom.js"></script>
-
-<script type="text/javascript">
-	var cacheTitle = document.title.replace("Flowtime.js | ", "");
-	var _gaq = _gaq || [];
-	_gaq.push(['_setAccount', 'UA-XXXXXXXX-XX']);
-	_gaq.push(['_trackPageview']);
-	_gaq.push(['_trackEvent', 'Flowtime', 'Landing', document.title]);
-	(function() {
-	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	})();
-
-
-	Flowtime.setScrollNavigation( false );
-
-	Flowtime.showProgress(true);
-	// Flowtime.fragmentsOnSide(true);
-	// Flowtime.fragmentsOnBack(true);
-	// Flowtime.useHistory(false);
-	// Flowtime.slideInPx(true);
-	// Flowtime.sectionsSlideToTop(true);
-	// Flowtime.gridNavigation(false);
-	// Flowtime.useOverviewVariant(true);
-	Flowtime.parallaxInPx(true);
-	//
-	// event management
-	// Flowtime.addEventListener("flowtimenavigation", onNavigation, false);
-	// Flowtime.onNavigation(onNavigation);
-	function onNavigation(e)
-	{
-		_gaq.push(['_trackEvent', 'Flowtime', 'Navigation', cacheTitle + ' > ' + document.title.replace("Flowtime.js | ", "")]);
-		// console.log(cacheTitle + ' > ' + document.title.replace("Flowtime.js | ", ""));
-		cacheTitle = document.title.replace("Flowtime.js | ", "");
-		//console.log('section', e.section, 'sectionIndex', e.sectionIndex);
-		//console.log('page', e.page, 'pageIndex', e.);
-		//console.log('pastSectionIndex', e.pastSectionIndex, 'pastPageIndex', e.pastPageIndex);
-		//console.log('prevSection', e.prevSection);
-		//console.log('nextSection', e.nextSection);
-		//console.log('prevPage', e.prevPage);
-		//console.log('nextPage', e.nextPage);
-		//console.log('fragment', e.fragment, + 'fragmentIndex', e.fragmentIndex);
-		//console.log("isOverview", e.isOverview);
-		//console.log('progress:', e.progress, 'total:', e.total);
-		// var value = Math.round(e.progress * 100 / e.total);
-		// console.log('Completion: ' + value + '%');
-	}
-	// starts the application with configuration options
-	Flowtime.start();
-</script>
-
-	<script type="text/javascript" src="http://slidemote.jit.su/slidemote.js#flowtime"></script>
 
 </body>
 </html>

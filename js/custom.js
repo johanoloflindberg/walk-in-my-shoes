@@ -5,10 +5,29 @@ jQuery(document).ready( function( $ ) {
 		$menuButton = $('button.js-menu');
 
 	var init = function () {
+
+		flowtimeConfig();
+		Flowtime.start();
+
 		$menuToggles.click( toggleMenu );
 
 		Flowtime.addEventListener("flowtimenavigation", onNavigation, false);
 		onNavigation();
+	}
+
+	var flowtimeConfig = function() {
+
+		Flowtime.setScrollNavigation( false );
+		Flowtime.showProgress( true );
+		// Flowtime.fragmentsOnSide( true );
+		// Flowtime.fragmentsOnBack( true );
+		// Flowtime.useHistory( false );
+		// Flowtime.slideInPx( true );
+		// Flowtime.sectionsSlideToTop( true );
+		// Flowtime.gridNavigation( false );
+		// Flowtime.useOverviewVariant( true );
+		Flowtime.parallaxInPx( true );
+
 	}
 
 	var toggleMenu = function() {
@@ -24,6 +43,7 @@ jQuery(document).ready( function( $ ) {
 			$('body').addClass('menu-open');
 			
 		}
+		
 	};
 
 
@@ -33,19 +53,13 @@ jQuery(document).ready( function( $ ) {
 		setBodyClass();
 		animateFeet();
 
-		// console.log(cacheTitle + ' > ' + document.title.replace("Flowtime.js | ", ""));
-		//console.log('section', e.section, 'sectionIndex', e.sectionIndex);
-		//console.log('page', e.page, 'pageIndex', e.);
-		//console.log('pastSectionIndex', e.pastSectionIndex, 'pastPageIndex', e.pastPageIndex);
-		//console.log('prevSection', e.prevSection);
-		//console.log('nextSection', e.nextSection);
-		//console.log('prevPage', e.prevPage);
-		//console.log('nextPage', e.nextPage);
-		//console.log('fragment', e.fragment, + 'fragmentIndex', e.fragmentIndex);
-		//console.log("isOverview", e.isOverview);
-		//console.log('progress:', e.progress, 'total:', e.total);
-		// var value = Math.round(e.progress * 100 / e.total);
-		// console.log('Completion: ' + value + '%');
+		console.log('section', e.section, 'sectionIndex', e.sectionIndex);
+		console.log('page', e.page, 'pageIndex', e.);
+		console.log('pastSectionIndex', e.pastSectionIndex, 'pastPageIndex', e.pastPageIndex);
+		console.log('prevSection', e.prevSection);
+		console.log('nextSection', e.nextSection);
+		console.log('prevPage', e.prevPage);
+		console.log('nextPage', e.nextPage);
 
 		console.log( e );
 	}
