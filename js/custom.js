@@ -43,7 +43,7 @@ jQuery(document).ready( function( $ ) {
 			$('body').addClass('menu-open');
 			
 		}
-		
+
 	};
 
 
@@ -53,13 +53,13 @@ jQuery(document).ready( function( $ ) {
 		setBodyClass();
 		animateFeet();
 
-		console.log('section', e.section, 'sectionIndex', e.sectionIndex);
-		console.log('page', e.page, 'pageIndex', e.);
-		console.log('pastSectionIndex', e.pastSectionIndex, 'pastPageIndex', e.pastPageIndex);
-		console.log('prevSection', e.prevSection);
-		console.log('nextSection', e.nextSection);
-		console.log('prevPage', e.prevPage);
-		console.log('nextPage', e.nextPage);
+		console.log( 'section', e.section, 'sectionIndex', e.sectionIndex );
+		console.log( 'page', e.page, 'pageIndex', e.pageIndex );
+		console.log( 'pastSectionIndex', e.pastSectionIndex, 'pastPageIndex', e.pastPageIndex );
+		console.log( 'prevSection', e.prevSection );
+		console.log( 'nextSection', e.nextSection );
+		console.log( 'prevPage', e.prevPage );
+		console.log( 'nextPage', e.nextPage );
 
 		console.log( e );
 	}
