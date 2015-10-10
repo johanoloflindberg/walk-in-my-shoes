@@ -114,7 +114,7 @@ table {
 
 	
 
-	
+
 
 	h2 {
 		font-size: 1.4em;
@@ -123,5 +123,32 @@ table {
 
 	p {
 		margin: 1em 0;
+	}
+}
+
+
+/* Risk Cards */
+ul.risk {
+	$riskWidth: 30rem;
+	$riskHeight: 10rem;
+
+	display:block;
+	position: relative;
+
+	height: $riskHeight;
+	width: $riskWidth;
+	margin: 2rem auto 8rem auto;
+
+	li {
+		display:block;
+		position:absolute;
+		background-color: #fff;
+
+		top:0;
+		left: 50%;
+		width: $riskWidth;
+		height: $riskHeight;
+		margin-left: - $riskWidth/2 ;
+
 	}
 }

@@ -270,23 +270,23 @@ body.amanda .ft-page .inner, body.james .ft-page .inner, body.dave .ft-page .inn
   text-align: center;
   position: relative;
   max-height: 75%; }
-body.amanda .ft-page {
+body .ft-section.amanda .ft-page {
   background: #70be8b url(../img/amanda/background-pattern.png) repeat; }
-body.james .ft-page {
+body .ft-section.james .ft-page {
   background: #666666 url(../img/james/background-pattern.png) repeat; }
-body.intro .ft-page, body.dave .ft-page {
+body .ft-section.intro .ft-page, body .ft-section.dave .ft-page {
   background: black url(../img/dave/background-pattern.png) repeat; }
 
-body.intro .intro-banner {
+.ft-section.intro .intro-banner {
   width: 100%;
   background-color: #E9B54A;
   text-align: center;
   margin: 15rem 0 3rem 0; }
-  body.intro .intro-banner img {
+  .ft-section.intro .intro-banner img {
     height: 12rem;
     width: auto;
     margin: 2rem auto; }
-body.intro p {
+.ft-section.intro p {
   text-align: center; }
 
 html {
@@ -367,3 +367,20 @@ table {
     font-weight: bold; }
   .ft-page p {
     margin: 1em 0; }
+
+/* Risk Cards */
+ul.risk {
+  display: block;
+  position: relative;
+  height: 10rem;
+  width: 30rem;
+  margin: 2rem auto 8rem auto; }
+  ul.risk li {
+    display: block;
+    position: absolute;
+    background-color: #fff;
+    top: 0;
+    left: 50%;
+    width: 30rem;
+    height: 10rem;
+    margin-left: -15rem; }

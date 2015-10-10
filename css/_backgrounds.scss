@@ -45,24 +45,27 @@ body {
 		}
 	}
 
-	&.amanda .ft-page {
-		background: #70be8b url(../img/amanda/background-pattern.png) repeat;
-	}
+	.ft-section {
 
-	&.james .ft-page{
-		background: #666 url(../img/james/background-pattern.png) repeat;
-	}
+		&.amanda .ft-page {
+			background: #70be8b url(../img/amanda/background-pattern.png) repeat;
+		}
 
-	&.intro .ft-page,
-	&.dave .ft-page {
-		background: #000 url(../img/dave/background-pattern.png) repeat;
+		&.james .ft-page{
+			background: #666 url(../img/james/background-pattern.png) repeat;
+		}
+
+		&.intro .ft-page,
+		&.dave .ft-page {
+			background: #000 url(../img/dave/background-pattern.png) repeat;
+		}
 	}
 }
 
 
 
 
-body {
+.ft-section {
 	&.intro {
 		
 		.intro-banner {
