@@ -4,7 +4,10 @@ header {
   line-height: 50px;
   position: fixed;
   width: 100%;
-  z-index: 100010; }
+  z-index: 100010;
+  transition: transform 0.6s cubic-bezier(0.56, 0.1, 0.34, 0.91); }
+  .hide-header header {
+    transform: translateY(-10rem); }
   header .inner {
     margin: 0 1rem; }
     header .inner p {
@@ -106,7 +109,10 @@ nav {
   height: 5rem;
   line-height: 5rem;
   width: 100%;
-  z-index: 100010; }
+  z-index: 100010;
+  transition: transform 0.6s cubic-bezier(0.56, 0.1, 0.34, 0.91); }
+  .hide-footer #footer {
+    transform: translateY(10rem); }
   #footer .inner {
     font-size: 2.2em;
     font-weight: bold; }
@@ -157,21 +163,52 @@ nav {
         content: "$"; }
 
 #budget-table {
-  width: 25rem;
+  width: 30rem;
   height: 30rem;
   background: #F3EAD4;
+  padding-top: 0rem;
   z-index: 100001;
   position: fixed;
   top: auto;
   right: 0;
   bottom: -35rem;
   transform: translateY(0);
-  transition: transform 0.6s cubic-bezier(0.56, 0.1, 0.34, 0.91);
-  padding-top: 6.2rem; }
+  transition: transform 0.6s cubic-bezier(0.56, 0.1, 0.34, 0.91); }
   .budget-open #budget-table {
     transform: translateY(-40rem); }
-  #budget-table table tbody {
-    color: #000; }
+  #budget-table table {
+    margin: 0 auto;
+    width: 100%; }
+    #budget-table table th, #budget-table table td {
+      font-size: 1em;
+      text-align: center;
+      padding: 1rem .5rem;
+      border: 1px solid #F3EAD4; }
+    #budget-table table th {
+      font-weight: bold;
+      background-color: #0858A4;
+      color: #F3EAD4; }
+    #budget-table table td {
+      color: #000; }
+    #budget-table table tr:nth-child(odd) {
+      background-color: #F3D9A1; }
+    #budget-table table .date {
+      width: 15%; }
+    #budget-table table .description {
+      width: 67%-balanceWidth; }
+    #budget-table table .change {
+      font-weight: bold;
+      width: 18%; }
+    #budget-table table .positive {
+      /*color: #3D65AC;*/
+      color: #0f9036; }
+    #budget-table table .negative {
+      color: #D46A4A; }
+    #budget-table table .balance {
+      font-weight: bold;
+      width: 18%; }
+      #budget-table table .balance::before {
+        content: "$"; }
 
 /* Feet */
 #feet .amanda, #feet .james, #feet .dave {
@@ -413,16 +450,6 @@ a.donate {
     border-left: 1px solid #811a0c;
     border-right: 1px solid #811a0c;
     line-height: 2.3rem; }
-
-table {
-  margin: 2rem auto; }
-  table th {
-    background-color: #3D65AC;
-    color: #F3EAD4; }
-  table th, table td {
-    font-size: .8em;
-    padding: .5rem 1rem;
-    border: 1px solid #F3EAD4; }
 
 /* Outtro */
 .logo-large {

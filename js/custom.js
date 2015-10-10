@@ -5,10 +5,8 @@ jQuery(document).ready( function( $ ) {
 		$menuButton = $('header button'),
 		$budgetToggles = $('#footer .budget-toggle'),
 		$budgetButton = $('#footer .budget-toggle'),
-		budget = {
-			balance: 0,
-			entries: []
-		};
+		$budgetTable = $('#budget-table table tbody'),
+		budget = {};
 
 	var init = function () {
 
@@ -17,8 +15,10 @@ jQuery(document).ready( function( $ ) {
 
 		$menuToggles.click( toggleMenu );
 		$budgetToggles.click( toggleBudget );
+		$('#feet').click( animateFeet );
 
 		Flowtime.addEventListener("flowtimenavigation", onNavigation, false);
+		resetBudget();
 		onNavigation();
 	}
 
@@ -72,14 +72,15 @@ jQuery(document).ready( function( $ ) {
 	var onNavigation = function (e) {
 		var $page;
 
-		setBodyClass();
-		animateFeet();
-
 		if ( undefined === e ) {
 			$page = $( 'div.ft-page.actual' );
 		}else {
 			$page = $( e.page );
 		}
+
+		setBodyClass( $page );
+		animateFeet();
+
 		doBudget( $page );
 		footerName( $page );
 
@@ -94,8 +95,9 @@ jQuery(document).ready( function( $ ) {
 		// console.log( e );
 	}
 
-	var setBodyClass = function() {
-		var sectionClasses = [ 'amanda', 'dave', 'james', 'intro', 'outro' ];
+	var setBodyClass = function( $page ) {
+		var sectionClasses = [ 'amanda', 'dave', 'james', 'intro', 'outro' ],
+			pageClasses = [ 'hide-header', 'hide-footer' ];
 
 		sectionClasses.forEach( function( name ){
 			if ( -1 !== location.hash.indexOf( name ) ) {
@@ -104,6 +106,18 @@ jQuery(document).ready( function( $ ) {
 				$('body').removeClass( name );
 			}
 		} ); 
+
+		pageClasses.forEach( function( name ){
+			if ( $page.hasClass( name ) ) {
+				$('body').addClass( name );
+			}else {
+				$('body').removeClass( name );
+			}
+		} );
+
+		if ( $('body').hasClass( 'intro' ) ) {
+			resetBudget();
+		}
 	}
 
 	var animateFeet = function ( e ) {
@@ -114,9 +128,22 @@ jQuery(document).ready( function( $ ) {
 		}, 2000 );
 	}
 
+	var resetBudget = function() {
+		budget = {
+			balance: 0,
+			entries: []
+		};
+
+		setBudgetDisplay();
+
+		$budgetTable.html( '' );
+
+		$budgetButton.removeClass('active');
+		$('body').removeClass('budget-open');
+	}
+
 	var doBudget = function( $item ) {
 		var entry = $item.data( 'budget-entry' ),
-			$table = $('#budget-table table tbody'),
 			$row;
 
 		if ( undefined === entry ) {
@@ -127,7 +154,7 @@ jQuery(document).ready( function( $ ) {
 		budget.entries.push( entry );
 
 		budget.balance = 0;
-		$table.html( '' );
+		$budgetTable.html( '' );
 
 		budget.entries.forEach( function( entry ){
 
@@ -135,21 +162,31 @@ jQuery(document).ready( function( $ ) {
 
 			$row = $( 
 				'<tr>' +
-					'<td>' + entry.date + '</td>' +
-					'<td>' + entry.description + '</td>' +
-					'<td>' + numberWithCommas( entry.amount ) + '</td>' +
-					'<td>' + numberWithCommas( budget.balance ) + '</td>' +
+					'<td class="date">' + entry.date + '</td>' +
+					'<td class="description">' + entry.description + '</td>' +
+					'<td class="change">' + numberWithCommas( entry.amount ) + '</td>' +
+					'<td class="balance">' + numberWithCommas( budget.balance ) + '</td>' +
 				'</tr>' 
 			);
 
-			$table.append( $row );
+			if ( entry.amount > 0 ) {
+				$row.find('td.change').addClass('positive');
+			}else {
+				$row.find('td.change').addClass('negative');
+			}
+
+			$budgetTable.append( $row );
 
 		} );
 
 		console.log( entry );
 		console.log( budget.entries );
 
-		$( '#footer .var-balance' ).text( numberWithCommas( budget.balance ) )
+		setBudgetDisplay();
+	}
+
+	var setBudgetDisplay = function() {
+		$( '#footer .var-balance' ).text( numberWithCommas( budget.balance ) );
 	}
 
 	var numberWithCommas = function(x) {
