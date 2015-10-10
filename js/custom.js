@@ -3,8 +3,12 @@ jQuery(document).ready( function( $ ) {
 	var 
 		$menuToggles = $('header button, div.flowtime, nav a'),
 		$menuButton = $('header button'),
-		$budgetToggles = $('#footer .budget-toggle, div.flowtime'),
-		$budgetButton = $('#footer .budget-toggle');
+		$budgetToggles = $('#footer .budget-toggle'),
+		$budgetButton = $('#footer .budget-toggle'),
+		budget = {
+			balance: 0,
+			entries: []
+		};
 
 	var init = function () {
 
@@ -76,7 +80,7 @@ jQuery(document).ready( function( $ ) {
 		}else {
 			$page = $( e.page );
 		}
-		budget( $page );
+		doBudget( $page );
 		footerName( $page );
 
 		// console.log( 'section', e.section, 'sectionIndex', e.sectionIndex );
@@ -110,15 +114,46 @@ jQuery(document).ready( function( $ ) {
 		}, 2000 );
 	}
 
-	var budget = function( $item ) {
-		var entry = $item.data( 'budget-entry' );
+	var doBudget = function( $item ) {
+		var entry = $item.data( 'budget-entry' ),
+			$table = $('#budget-table table tbody'),
+			$row;
 
 		if ( undefined === entry ) {
 			console.log( "No budget change." );
 			return;
 		}
 
+		budget.entries.push( entry );
+
+		budget.balance = 0;
+		$table.html( '' );
+
+		budget.entries.forEach( function( entry ){
+
+			budget.balance = budget.balance + entry.amount;
+
+			$row = $( 
+				'<tr>' +
+					'<td>' + entry.date + '</td>' +
+					'<td>' + entry.description + '</td>' +
+					'<td>' + numberWithCommas( entry.amount ) + '</td>' +
+					'<td>' + numberWithCommas( budget.balance ) + '</td>' +
+				'</tr>' 
+			);
+
+			$table.append( $row );
+
+		} );
+
 		console.log( entry );
+		console.log( budget.entries );
+
+		$( '#footer .var-balance' ).text( numberWithCommas( budget.balance ) )
+	}
+
+	var numberWithCommas = function(x) {
+		return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 	}
 
 	var footerName = function( $page ) {

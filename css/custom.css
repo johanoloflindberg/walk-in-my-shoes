@@ -150,9 +150,11 @@ nav {
         transition: 0.3s transform linear; }
     #footer .budget-toggle.open .balance-label span {
       transform: rotate(180deg); }
-    #footer .budget-toggle .var-budget {
-      min-width: 8rem;
+    #footer .budget-toggle .var-balance {
+      min-width: 7rem;
       margin-top: -.5rem; }
+      #footer .budget-toggle .var-balance::before {
+        content: "$"; }
 
 #budget-table {
   width: 25rem;
@@ -168,6 +170,8 @@ nav {
   padding-top: 6.2rem; }
   .budget-open #budget-table {
     transform: translateY(-40rem); }
+  #budget-table table tbody {
+    color: #000; }
 
 /* Feet */
 #feet .amanda, #feet .james, #feet .dave {

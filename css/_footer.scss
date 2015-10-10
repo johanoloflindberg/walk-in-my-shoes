@@ -80,9 +80,13 @@ $footerHeight: 5rem;
 			}
 		}
 
-		.var-budget {
-			min-width: 8rem;
+		.var-balance {
+			min-width: 7rem;
 			margin-top: -.5rem;
+
+			&::before {
+				content: "$";
+			}
 		}
 
 	}
@@ -111,6 +115,12 @@ $footerHeight: 5rem;
 
 	.budget-open & {
 		transform: translateY( -($budgetHeight + $footerHeight * 2) );
+	}
+
+	table {
+		tbody {
+			color: #000;
+		}
 	}
 
 }
