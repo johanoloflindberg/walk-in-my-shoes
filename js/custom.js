@@ -60,6 +60,7 @@ jQuery(document).ready( function( $ ) {
 			$page = $( e.page );
 		}
 		budget( $page );
+		footerName( $page );
 
 		// console.log( 'section', e.section, 'sectionIndex', e.sectionIndex );
 		// console.log( 'page', e.page, 'pageIndex', e.pageIndex );
@@ -101,11 +102,14 @@ jQuery(document).ready( function( $ ) {
 		}
 
 		console.log( entry );
+	}
 
+	var footerName = function( $page ) {
+		var $section = $page.parents( '.ft-section' );
 
-
-
-
+		if ( $section.data('name') ) {
+			$('#footer .var-name').text( $section.data( 'name') );
+		}
 	}
 
 	init();
