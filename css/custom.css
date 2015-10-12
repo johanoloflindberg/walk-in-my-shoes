@@ -375,7 +375,7 @@ body .intro-page .innerer, body.amanda .ft-page .innerer, body.james .ft-page .i
   padding: 2rem;
   height: 100%;
   overflow: auto; }
-body.amanda .ft-page .inner, body.james .ft-page .inner, body.dave .ft-page .inner {
+body .ft-section.amanda .ft-page .inner, body .ft-section.james .ft-page .inner, body .ft-section.dave .ft-page .inner {
   background-color: #F3EBD4;
   color: #636466;
   width: auto;
