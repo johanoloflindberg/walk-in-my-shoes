@@ -102,6 +102,27 @@ nav {
       nav ul li .donate {
         margin: 0 auto; }
 
+#footer-logo {
+  position: fixed;
+  bottom: 0rem;
+  height: 2rem;
+  width: 100%;
+  background-color: #0657A3;
+  z-index: 100000;
+  transition: transform 0.6s cubic-bezier(0.56, 0.1, 0.34, 0.91);
+  transform: translateY(10rem); }
+  #footer-logo img {
+    position: absolute;
+    top: -4.5rem;
+    height: 6rem;
+    width: auto;
+    left: 50%;
+    margin-left: -5.3rem;
+    /* Center */ }
+
+.show-footer-logo #footer-logo {
+  transform: translateY(0); }
+
 #footer {
   position: fixed;
   bottom: 0;
@@ -229,6 +250,9 @@ body.dave #feet .dave {
 
 body.intro #feet .james {
   transform: translateY(-4rem); }
+
+body.hide-feet #feet .amanda, body.hide-feet #feet .james, body.hide-feet #feet .dave {
+  transform: translateY(-30rem); }
 
 #feet {
   position: absolute;
@@ -372,9 +396,40 @@ body .intro-page .inner, body.amanda .ft-page .inner, body.james .ft-page .inner
   position: relative;
   max-height: 75%; }
 body .intro-page .innerer, body.amanda .ft-page .innerer, body.james .ft-page .innerer, body.dave .ft-page .innerer {
-  padding: 2rem;
+  padding: 2rem 4rem;
   height: 100%;
+  line-height: 1.3;
   overflow: auto; }
+body .choose-path .inner {
+  background-color: transparent;
+  margin-top: 1rem; }
+body .choose-path .choose-path-img {
+  width: 20rem;
+  height: auto; }
+body .choose-path ul {
+  margin-top: 2rem; }
+  body .choose-path ul li a {
+    display: block;
+    padding: 3rem 0;
+    font-size: 1.6em;
+    font-weight: bold;
+    color: #F6EBD3;
+    position: relative; }
+    body .choose-path ul li a img {
+      position: absolute;
+      left: -6rem;
+      top: 1.5rem;
+      height: 5.6rem;
+      width: auto;
+      transition: transform 0.6s cubic-bezier(0.56, 0.1, 0.34, 0.91); }
+    body .choose-path ul li a.amanda img {
+      left: -12.5rem; }
+    body .choose-path ul li a.dave img {
+      left: -10rem; }
+    body .choose-path ul li a:hover, body .choose-path ul li a:active {
+      text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4); }
+      body .choose-path ul li a:hover img, body .choose-path ul li a:active img {
+        transform: translateX(2rem); }
 body .ft-section.amanda .ft-page .inner, body .ft-section.james .ft-page .inner, body .ft-section.dave .ft-page .inner {
   background-color: #F3EBD4;
   color: #636466;
@@ -424,10 +479,12 @@ nav a {
 a.button {
   color: #F6EAD4;
   background-color: #0858A4;
-  line-height: 1em;
+  line-height: 1.4em;
+  font-size: 1.4em;
+  font-weight: bold;
   display: inline-block;
   width: auto;
-  padding: 2rem;
+  padding: 1rem 2rem;
   border-radius: 1rem;
   border-top: 2px solid transparent;
   border-bottom: 2px solid transparent;

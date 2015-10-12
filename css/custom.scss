@@ -34,11 +34,13 @@ nav a {
 a.button {
 	color: #F6EAD4;
 	background-color: #0858A4;
-	line-height: 1em;
+	line-height: 1.4em;
+	font-size: 1.4em;
+	font-weight: bold;
 
 	display: inline-block;
 	width: auto;
-	padding: 2rem;
+	padding: 1rem 2rem;
 	border-radius: 1rem;
 	border-top: 2px solid transparent;
 	border-bottom: 2px solid transparent;
@@ -93,10 +95,6 @@ a.donate {
 
 	max-height: 100%;
 	overflow: hidden;
-
-	
-
-
 
 	h2 {
 		font-size: 1.4em;

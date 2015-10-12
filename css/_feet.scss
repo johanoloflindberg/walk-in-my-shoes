@@ -18,6 +18,12 @@ body.james #feet .james { transform: translateY( 0 ); }
 body.dave #feet .dave { transform: translateY( 0 ); }
 body.intro #feet .james { transform: translateY( -4rem ); }
 
+body.hide-feet #feet {
+	.amanda, .james, .dave {
+		transform: translateY( -30rem );
+	}
+}
+
 #feet {
 	position: absolute;
 	top:5rem;

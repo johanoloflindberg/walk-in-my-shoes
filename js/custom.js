@@ -97,7 +97,7 @@ jQuery(document).ready( function( $ ) {
 
 	var setBodyClass = function( $page ) {
 		var sectionClasses = [ 'amanda', 'dave', 'james', 'intro', 'outro' ],
-			pageClasses = [ 'hide-header', 'hide-footer' ];
+			pageClasses = [ 'hide-header', 'hide-footer', 'hide-feet', 'show-footer-logo' ];
 
 		sectionClasses.forEach( function( name ){
 			if ( -1 !== location.hash.indexOf( name ) ) {
