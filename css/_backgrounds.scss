@@ -77,7 +77,7 @@ body {
 
 	.ft-section {
 
-		&.amanda, &.james, &.dave {
+		&.amanda, &.james, &.dave, &.outro {
 			.ft-page {
 				.inner {
 					background-color: #F3EBD4;
@@ -103,9 +103,55 @@ body {
 			background: #666 url(../img/james/background-pattern.png) repeat;
 		}
 
+		&.outro .ft-page,
 		&.intro .ft-page,
 		&.dave .ft-page {
 			background: #000 url(../img/dave/background-pattern.png) repeat;
+		}
+
+		&.outro {
+			.ft-page {
+				height: 100%;
+
+				.inner {
+					margin-top: -2rem;
+					margin-bottom: 0;
+					height: 100%;
+					max-height: 100%;
+
+					.innerer {
+						padding: 6rem 2rem;
+						text-align: center;
+					}
+				}
+			}
+
+			.ctas {
+				width: 24rem;
+				margin: 1rem auto 0 auto;
+				.donate {
+					width: 100%;
+					padding-left: 0;
+					padding-right: 0;
+					width: 100%;
+					font-size: 4rem;
+				}
+				.half {
+					width: 47%;
+					padding: 0;
+					margin-top: 1.5rem;
+					background-color: #E9B54A;
+					&:hover {
+						background-color: darken( #E9B54A, 10% );
+					}
+				}
+				.left {
+					float: left;
+				}
+				.right {
+					float: right;
+				}
+			}
 		}
 	}
 }

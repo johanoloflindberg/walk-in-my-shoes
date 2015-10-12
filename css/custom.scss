@@ -42,20 +42,20 @@ a.button {
 	width: auto;
 	padding: 1rem 2rem;
 	border-radius: 1rem;
-	border-top: 2px solid transparent;
+/*	border-top: 2px solid transparent;
 	border-bottom: 2px solid transparent;
 	border-left: 1px solid transparent;
-	border-right: 1px solid transparent;
+	border-right: 1px solid transparent;*/
 
 	&:hover {
 		background-color: darken( #0858A4, 10% );
 	}
 	&:active {
-		line-height: 1.1em;
+	/*	line-height: 1.1em;
 
 		border-top: 2px solid darken( #0858A4, 30% );
 		border-left: 1px solid darken( #0858A4, 30% );
-		border-right: 1px solid darken( #0858A4, 30% );
+		border-right: 1px solid darken( #0858A4, 30% );*/
 	}
 }
 
@@ -65,12 +65,12 @@ a.donate {
 	&:hover {
 		background-color: darken( #ED4F39, 10% );
 	}
-	&:active {
+/*	&:active {
 		border-top: 2px solid darken( #ED4F39, 30% );
 		border-left: 1px solid darken( #ED4F39, 30% );
 		border-right: 1px solid darken( #ED4F39, 30% );
 		line-height: 2.3rem;
-	}
+	}*/
 }
 
 

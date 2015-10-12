@@ -430,7 +430,7 @@ body .choose-path ul {
       text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4); }
       body .choose-path ul li a:hover img, body .choose-path ul li a:active img {
         transform: translateX(2rem); }
-body .ft-section.amanda .ft-page .inner, body .ft-section.james .ft-page .inner, body .ft-section.dave .ft-page .inner {
+body .ft-section.amanda .ft-page .inner, body .ft-section.james .ft-page .inner, body .ft-section.dave .ft-page .inner, body .ft-section.outro .ft-page .inner {
   background-color: #F3EBD4;
   color: #636466;
   width: auto;
@@ -443,8 +443,38 @@ body .ft-section.amanda .ft-page {
   background: #70be8b url(../img/amanda/background-pattern.png) repeat; }
 body .ft-section.james .ft-page {
   background: #666666 url(../img/james/background-pattern.png) repeat; }
-body .ft-section.intro .ft-page, body .ft-section.dave .ft-page {
+body .ft-section.outro .ft-page, body .ft-section.intro .ft-page, body .ft-section.dave .ft-page {
   background: black url(../img/dave/background-pattern.png) repeat; }
+body .ft-section.outro .ft-page {
+  height: 100%; }
+  body .ft-section.outro .ft-page .inner {
+    margin-top: -2rem;
+    margin-bottom: 0;
+    height: 100%;
+    max-height: 100%; }
+    body .ft-section.outro .ft-page .inner .innerer {
+      padding: 6rem 2rem;
+      text-align: center; }
+body .ft-section.outro .ctas {
+  width: 24rem;
+  margin: 1rem auto 0 auto; }
+  body .ft-section.outro .ctas .donate {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    font-size: 4rem; }
+  body .ft-section.outro .ctas .half {
+    width: 47%;
+    padding: 0;
+    margin-top: 1.5rem;
+    background-color: #E9B54A; }
+    body .ft-section.outro .ctas .half:hover {
+      background-color: #e3a21d; }
+  body .ft-section.outro .ctas .left {
+    float: left; }
+  body .ft-section.outro .ctas .right {
+    float: right; }
 
 .ft-section.intro .intro-banner {
   width: 100%;
@@ -486,27 +516,29 @@ a.button {
   width: auto;
   padding: 1rem 2rem;
   border-radius: 1rem;
-  border-top: 2px solid transparent;
-  border-bottom: 2px solid transparent;
-  border-left: 1px solid transparent;
-  border-right: 1px solid transparent; }
+  /*	border-top: 2px solid transparent;
+  	border-bottom: 2px solid transparent;
+  	border-left: 1px solid transparent;
+  	border-right: 1px solid transparent;*/ }
   a.button:hover {
     background-color: #063e73; }
   a.button:active {
-    line-height: 1.1em;
-    border-top: 2px solid #010a12;
-    border-left: 1px solid #010a12;
-    border-right: 1px solid #010a12; }
+    	/*	line-height: 1.1em;
+    
+    		border-top: 2px solid darken( #0858A4, 30% );
+    		border-left: 1px solid darken( #0858A4, 30% );
+    		border-right: 1px solid darken( #0858A4, 30% );*/ }
 
 a.donate {
-  background-color: #ED4F39; }
+  background-color: #ED4F39;
+  /*	&:active {
+  		border-top: 2px solid darken( #ED4F39, 30% );
+  		border-left: 1px solid darken( #ED4F39, 30% );
+  		border-right: 1px solid darken( #ED4F39, 30% );
+  		line-height: 2.3rem;
+  	}*/ }
   a.donate:hover {
     background-color: #df2d14; }
-  a.donate:active {
-    border-top: 2px solid #811a0c;
-    border-left: 1px solid #811a0c;
-    border-right: 1px solid #811a0c;
-    line-height: 2.3rem; }
 
 /* Outtro */
 .logo-large {
