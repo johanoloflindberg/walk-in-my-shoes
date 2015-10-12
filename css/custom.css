@@ -389,13 +389,13 @@ body.hide-feet #feet .amanda, body.hide-feet #feet .james, body.hide-feet #feet 
 body .intro-page .inner {
   background-color: rgba(125, 125, 125, 0.6);
   margin-top: 10rem; }
-body .intro-page .inner, body.amanda .ft-page .inner, body.james .ft-page .inner, body.dave .ft-page .inner {
+body .intro-page .inner, body .ft-section.amanda .ft-page .inner, body .ft-section.james .ft-page .inner, body .ft-section.dave .ft-page .inner {
   width: auto;
   min-width: 8rem;
   text-align: center;
   position: relative;
   max-height: 75%; }
-body .intro-page .innerer, body.amanda .ft-page .innerer, body.james .ft-page .innerer, body.dave .ft-page .innerer {
+body .intro-page .innerer, body .ft-section.amanda .ft-page .innerer, body .ft-section.james .ft-page .innerer, body .ft-section.dave .ft-page .innerer {
   padding: 2rem 4rem;
   height: 100%;
   line-height: 1.3;
