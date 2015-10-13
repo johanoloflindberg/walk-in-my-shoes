@@ -1,3 +1,15 @@
+/*
+	iOS miscalculates viewport width for fixed elements.
+	See http://stackoverflow.com/questions/29315889/ios-safari-100-width-fixed-position-header-wider-than-viewport
+*/
+var forceWidthsForFixedElements = function() {
+	var $ = jQuery,
+		bodyWidth = $(window).width();
+
+	$("header, #footer, #footer-logo").width( bodyWidth ).css( 'width', bodyWidth );
+	$("nav").css('left', bodyWidth - $("nav").width() );
+}
+
 jQuery(document).ready( function( $ ) {
 
 	var 
@@ -20,6 +32,9 @@ jQuery(document).ready( function( $ ) {
 		Flowtime.addEventListener("flowtimenavigation", onNavigation, false);
 		resetBudget();
 		onNavigation();
+
+		$(window).resize( setTimeout( forceWidthsForFixedElements, 100 ) );
+		$(window).load( forceWidthsForFixedElements );
 	}
 
 	var flowtimeConfig = function() {
