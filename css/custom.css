@@ -506,6 +506,7 @@ nav a {
   color: #F6EAD4; }
 
 a.button {
+  text-transform: lowercase;
   color: #F6EAD4;
   background-color: #0858A4;
   line-height: 1.4em;
