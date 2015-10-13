@@ -37,7 +37,10 @@
 		text-align: center;
 		position: relative;
 
-		max-height: 75%;
+		height: 50%;
+
+		overflow-y: scroll;
+		-webkit-overflow-scrolling: touch;
 	}
 
 	.innerer {

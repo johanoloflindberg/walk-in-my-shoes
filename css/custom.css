@@ -417,7 +417,9 @@ body.hide-feet #feet .amanda, body.hide-feet #feet .james, body.hide-feet #feet 
   min-width: 8rem;
   text-align: center;
   position: relative;
-  max-height: 75%; }
+  height: 50%;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch; }
 .intro-page .innerer, .ft-section.amanda .ft-page .innerer, .ft-section.james .ft-page .innerer, .ft-section.dave .ft-page .innerer {
   padding: 1rem;
   height: 100%;

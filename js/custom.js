@@ -55,6 +55,8 @@ jQuery(document).ready( function( $ ) {
 		// Flowtime.gridNavigation( false );
 		// Flowtime.useOverviewVariant( true );
 		Flowtime.parallaxInPx( true );
+		Flowtime.nearestPageToTop( false );
+		Flowtime.setTouchNavigation( false );
 
 	}
 
