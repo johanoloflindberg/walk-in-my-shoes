@@ -84,6 +84,8 @@ jQuery(document).ready( function( $ ) {
 		doBudget( $page );
 		footerName( $page );
 
+		riskCard( $page );
+
 		// console.log( 'section', e.section, 'sectionIndex', e.sectionIndex );
 		// console.log( 'page', e.page, 'pageIndex', e.pageIndex );
 		// console.log( 'pastSectionIndex', e.pastSectionIndex, 'pastPageIndex', e.pastPageIndex );
@@ -201,6 +203,24 @@ jQuery(document).ready( function( $ ) {
 		}
 	}
 
+	var riskCard = function( $page ) {
+		var i = 0,
+			$cards = $page.find( "ul.risk li" ),
+			$activeCard;
+
+		$activeCard = $cards.random();
+
+		$activeCard.show();
+
+		doBudget( $activeCard );
+
+	};
+
 	init();
 
 } );
+
+jQuery.fn.random = function() {
+	var randomIndex = Math.floor( Math.random() * this.length );  
+	return jQuery( this[ randomIndex ] );
+};

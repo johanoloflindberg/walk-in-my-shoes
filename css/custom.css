@@ -386,51 +386,54 @@ body.hide-feet #feet .amanda, body.hide-feet #feet .james, body.hide-feet #feet 
   100% {
     margin-top: 3px;
     margin-left: 0px; } }
-body .intro-page .inner {
+.intro-page .inner {
   background-color: rgba(125, 125, 125, 0.6);
   margin-top: 10rem; }
-body .intro-page .inner, body .ft-section.amanda .ft-page .inner, body .ft-section.james .ft-page .inner, body .ft-section.dave .ft-page .inner {
+
+.intro-page .inner, .ft-section.amanda .ft-page .inner, .ft-section.james .ft-page .inner, .ft-section.dave .ft-page .inner {
   width: auto;
   min-width: 8rem;
   text-align: center;
   position: relative;
   max-height: 75%; }
-body .intro-page .innerer, body .ft-section.amanda .ft-page .innerer, body .ft-section.james .ft-page .innerer, body .ft-section.dave .ft-page .innerer {
+.intro-page .innerer, .ft-section.amanda .ft-page .innerer, .ft-section.james .ft-page .innerer, .ft-section.dave .ft-page .innerer {
   padding: 2rem 4rem;
   height: 100%;
   line-height: 1.3;
   overflow: auto; }
-body .choose-path .inner {
+
+.choose-path .inner {
   background-color: transparent;
   margin-top: 1rem; }
-body .choose-path .choose-path-img {
+.choose-path .choose-path-img {
   width: 20rem;
   height: auto; }
-body .choose-path ul {
+.choose-path ul {
   margin-top: 2rem; }
-  body .choose-path ul li a {
+  .choose-path ul li a {
     display: block;
     padding: 3rem 0;
     font-size: 1.6em;
     font-weight: bold;
     color: #F6EBD3;
     position: relative; }
-    body .choose-path ul li a img {
+    .choose-path ul li a img {
       position: absolute;
       left: -6rem;
       top: 1.5rem;
       height: 5.6rem;
       width: auto;
       transition: transform 0.6s cubic-bezier(0.56, 0.1, 0.34, 0.91); }
-    body .choose-path ul li a.amanda img {
+    .choose-path ul li a.amanda img {
       left: -12.5rem; }
-    body .choose-path ul li a.dave img {
+    .choose-path ul li a.dave img {
       left: -10rem; }
-    body .choose-path ul li a:hover, body .choose-path ul li a:active {
+    .choose-path ul li a:hover, .choose-path ul li a:active {
       text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4); }
-      body .choose-path ul li a:hover img, body .choose-path ul li a:active img {
+      .choose-path ul li a:hover img, .choose-path ul li a:active img {
         transform: translateX(2rem); }
-body .ft-section.amanda .ft-page .inner, body .ft-section.james .ft-page .inner, body .ft-section.dave .ft-page .inner, body .ft-section.outro .ft-page .inner {
+
+.ft-section.amanda .ft-page .inner, .ft-section.james .ft-page .inner, .ft-section.dave .ft-page .inner, .ft-section.outro .ft-page .inner {
   background-color: #F3EBD4;
   color: #636466;
   width: auto;
@@ -439,41 +442,41 @@ body .ft-section.amanda .ft-page .inner, body .ft-section.james .ft-page .inner,
   text-align: center;
   position: relative;
   max-height: 75%; }
-body .ft-section.amanda .ft-page {
+.ft-section.amanda .ft-page {
   background: #70be8b url(../img/amanda/background-pattern.png) repeat; }
-body .ft-section.james .ft-page {
+.ft-section.james .ft-page {
   background: #666666 url(../img/james/background-pattern.png) repeat; }
-body .ft-section.outro .ft-page, body .ft-section.intro .ft-page, body .ft-section.dave .ft-page {
+.ft-section.outro .ft-page, .ft-section.intro .ft-page, .ft-section.dave .ft-page {
   background: black url(../img/dave/background-pattern.png) repeat; }
-body .ft-section.outro .ft-page {
+.ft-section.outro .ft-page {
   height: 100%; }
-  body .ft-section.outro .ft-page .inner {
+  .ft-section.outro .ft-page .inner {
     margin-top: -2rem;
     margin-bottom: 0;
     height: 100%;
     max-height: 100%; }
-    body .ft-section.outro .ft-page .inner .innerer {
+    .ft-section.outro .ft-page .inner .innerer {
       padding: 6rem 2rem;
       text-align: center; }
-body .ft-section.outro .ctas {
+.ft-section.outro .ctas {
   width: 24rem;
   margin: 1rem auto 0 auto; }
-  body .ft-section.outro .ctas .donate {
+  .ft-section.outro .ctas .donate {
     width: 100%;
     padding-left: 0;
     padding-right: 0;
     width: 100%;
     font-size: 4rem; }
-  body .ft-section.outro .ctas .half {
+  .ft-section.outro .ctas .half {
     width: 47%;
     padding: 0;
     margin-top: 1.5rem;
     background-color: #E9B54A; }
-    body .ft-section.outro .ctas .half:hover {
+    .ft-section.outro .ctas .half:hover {
       background-color: #e3a21d; }
-  body .ft-section.outro .ctas .left {
+  .ft-section.outro .ctas .left {
     float: left; }
-  body .ft-section.outro .ctas .right {
+  .ft-section.outro .ctas .right {
     float: right; }
 
 .ft-section.intro .intro-banner {
@@ -562,15 +565,15 @@ a.donate {
 ul.risk {
   display: block;
   position: relative;
-  height: 10rem;
-  width: 30rem;
-  margin: 2rem auto 8rem auto; }
+  height: auto;
+  width: auto;
+  margin: 2rem auto; }
   ul.risk li {
-    display: block;
-    position: absolute;
+    display: none;
+    /*position:absolute;*/
     background-color: #fff;
-    top: 0;
-    left: 50%;
-    width: 30rem;
-    height: 10rem;
-    margin-left: -15rem; }
+    /*top:0;
+    left: 50%;*/
+    width: auto;
+    height: auto;
+    /*margin-left: - $riskWidth/2 ;*/ }
