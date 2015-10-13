@@ -249,7 +249,7 @@ body.amanda #feet .amanda {
   transform: translateY(4rem); }
 
 body.james #feet .james {
-  transform: translateY(4rem); }
+  transform: translateY(3rem); }
 
 body.dave #feet .dave {
   transform: translateY(4rem); }
@@ -403,10 +403,13 @@ body.hide-feet #feet .amanda, body.hide-feet #feet .james, body.hide-feet #feet 
   max-height: 100%;
   overflow: hidden; }
   .ft-page h2 {
-    font-size: 1.4em;
+    font-size: 1.2em;
     font-weight: bold; }
   .ft-page p {
-    margin: 1em 0; }
+    margin: .5em 0; }
+  .ft-page h2.balance, .ft-page p.balance {
+    color: #0858A4;
+    font-weight: bold; }
 
 .intro-page .inner {
   background-color: rgba(125, 125, 125, 0.6);
@@ -416,15 +419,10 @@ body.hide-feet #feet .amanda, body.hide-feet #feet .james, body.hide-feet #feet 
   width: auto;
   min-width: 8rem;
   text-align: center;
-  position: relative;
-  height: 50%;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch; }
+  position: relative; }
 .intro-page .innerer, .ft-section.amanda .ft-page .innerer, .ft-section.james .ft-page .innerer, .ft-section.dave .ft-page .innerer {
   padding: 1rem;
-  height: 100%;
-  line-height: 1.3;
-  overflow: auto; }
+  line-height: 1.3; }
 
 .choose-path .inner {
   background-color: transparent;
@@ -462,35 +460,31 @@ body.hide-feet #feet .amanda, body.hide-feet #feet .james, body.hide-feet #feet 
   color: #636466;
   width: auto;
   min-width: 8rem;
-  margin: 8rem 4rem;
+  margin: 7rem 2rem;
   text-align: center;
-  position: relative;
-  max-height: 75%; }
+  position: relative; }
 .ft-section.amanda .ft-page {
   background: #70be8b url(../img/amanda/background-pattern.png) repeat; }
 .ft-section.james .ft-page {
   background: #666666 url(../img/james/background-pattern.png) repeat; }
 .ft-section.outro .ft-page, .ft-section.intro .ft-page, .ft-section.dave .ft-page {
   background: black url(../img/dave/background-pattern.png) repeat; }
-.ft-section.outro .ft-page {
-  height: 100%; }
-  .ft-section.outro .ft-page .inner {
-    margin-top: -2rem;
-    margin-bottom: 0;
-    height: 100%;
-    max-height: 100%; }
-    .ft-section.outro .ft-page .inner .innerer {
-      padding: 6rem 2rem;
-      text-align: center; }
+.ft-section.outro .ft-page .inner {
+  margin-top: -4rem;
+  margin-bottom: -4rem; }
+  .ft-section.outro .ft-page .inner .innerer {
+    padding: 6rem 2rem 14rem 2rem;
+    text-align: center; }
+.ft-section.outro .logo-large {
+  height: 16rem;
+  margin: 0 0 1rem 0; }
 .ft-section.outro .ctas {
   width: 24rem;
   margin: 1rem auto 0 auto; }
   .ft-section.outro .ctas .donate {
     width: 100%;
-    padding-left: 0;
-    padding-right: 0;
-    width: 100%;
-    font-size: 4rem; }
+    padding: 1rem 0;
+    font-size: 3rem; }
   .ft-section.outro .ctas .half {
     width: 47%;
     padding: 0;
@@ -568,11 +562,6 @@ a.donate {
   a.donate:hover {
     background-color: #df2d14; }
 
-/* Outtro */
-.logo-large {
-  height: 20rem;
-  margin: 0 0 2rem 0; }
-
 /* Risk Cards */
 ul.risk {
   display: block;
@@ -585,7 +574,6 @@ ul.risk {
     width: auto;
     height: auto; }
 
-p.balance {
-  font-size: 1.6em;
-  font-weight: bold;
-  color: #0858A4; }
+ul.choices li {
+  list-style-type: disc;
+  list-style-position: inside; }

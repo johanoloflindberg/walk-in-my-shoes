@@ -76,13 +76,6 @@ a.donate {
 }
 
 
-/* Outtro */
-
-.logo-large {
-	height: 20rem;
-	margin: 0 0 2rem 0;
-}
-
 
 /* Risk Cards */
 ul.risk {
@@ -104,10 +97,9 @@ ul.risk {
 	}
 }
 
-p.balance {
-
-	font-size: 1.6em;
-	font-weight: bold;
-	color: #0858A4;
-
+ul.choices {
+	li {
+		list-style-type: disc;
+		list-style-position: inside;
+	}
 }

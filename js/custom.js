@@ -245,9 +245,9 @@ jQuery(document).ready( function( $ ) {
 			$cards = $page.find( "ul.risk li" ),
 			$activeCard;
 
-		$activeCard = $cards.random();
+		$activeCard = $cards.random().first();
 
-		$activeCard.show();
+		$activeCard.show().siblings().hide();
 
 		doBudget( $activeCard );
 
