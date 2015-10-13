@@ -1,6 +1,7 @@
 /* Feet */
 
 #feet {
+
 	.amanda, .james, .dave {
 		transform: translateY( -30rem );
 		transition: transform 0.6s cubic-bezier(.56,.1,.34,.91);
@@ -9,14 +10,20 @@
 
 body.amanda, body.james, body.dave {
 	#feet {
-		transform: translateY( -7rem );
+		transform: translateY( -5rem );
 	}
 }
 
-body.amanda #feet .amanda { transform: translateY( 0 ); }
-body.james #feet .james { transform: translateY( 0 ); }
-body.dave #feet .dave { transform: translateY( 0 ); }
-body.intro #feet .james { transform: translateY( -4rem ); }
+body.amanda #feet .amanda { transform: translateY( 6rem ); }
+body.james #feet .james { transform: translateY( 6rem ); }
+body.dave #feet .dave { transform: translateY( 6rem ); }
+body.intro #feet .james { transform: translateY( 0 ); }
+
+body.intro #feet {
+	.amanda, .dave {
+		display:none;
+	}
+}
 
 body.hide-feet #feet {
 	.amanda, .james, .dave {
@@ -26,7 +33,7 @@ body.hide-feet #feet {
 
 #feet {
 	position: absolute;
-	top:5rem;
+	top:-2rem;
 
 	width: 100%;
 

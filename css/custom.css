@@ -7,6 +7,7 @@ header {
   z-index: 100010;
   transition: transform 0.6s cubic-bezier(0.56, 0.1, 0.34, 0.91); }
   .hide-header header {
+    -webkit-transform: translateY(-10rem);
     transform: translateY(-10rem); }
   header .inner {
     margin: 0 1rem; }
@@ -239,26 +240,29 @@ nav {
   transition: transform 0.6s cubic-bezier(0.56, 0.1, 0.34, 0.91); }
 
 body.amanda #feet, body.james #feet, body.dave #feet {
-  transform: translateY(-7rem); }
+  transform: translateY(-5rem); }
 
 body.amanda #feet .amanda {
-  transform: translateY(0); }
+  transform: translateY(6rem); }
 
 body.james #feet .james {
-  transform: translateY(0); }
+  transform: translateY(6rem); }
 
 body.dave #feet .dave {
-  transform: translateY(0); }
+  transform: translateY(6rem); }
 
 body.intro #feet .james {
-  transform: translateY(-4rem); }
+  transform: translateY(0); }
+
+body.intro #feet .amanda, body.intro #feet .dave {
+  display: none; }
 
 body.hide-feet #feet .amanda, body.hide-feet #feet .james, body.hide-feet #feet .dave {
   transform: translateY(-30rem); }
 
 #feet {
   position: absolute;
-  top: 5rem;
+  top: -2rem;
   width: 100%;
   z-index: 500; }
   #feet .amanda, #feet .james, #feet .dave {
@@ -390,7 +394,7 @@ body.hide-feet #feet .amanda, body.hide-feet #feet .james, body.hide-feet #feet 
     margin-left: 0px; } }
 .intro-page .inner {
   background-color: rgba(125, 125, 125, 0.6);
-  margin-top: 10rem; }
+  margin-top: 8rem; }
 
 .intro-page .inner, .ft-section.amanda .ft-page .inner, .ft-section.james .ft-page .inner, .ft-section.dave .ft-page .inner {
   width: auto;
@@ -399,7 +403,7 @@ body.hide-feet #feet .amanda, body.hide-feet #feet .james, body.hide-feet #feet 
   position: relative;
   max-height: 75%; }
 .intro-page .innerer, .ft-section.amanda .ft-page .innerer, .ft-section.james .ft-page .innerer, .ft-section.dave .ft-page .innerer {
-  padding: 2rem 4rem;
+  padding: 2rem 2rem;
   height: 100%;
   line-height: 1.3;
   overflow: auto; }
@@ -485,7 +489,7 @@ body.hide-feet #feet .amanda, body.hide-feet #feet .james, body.hide-feet #feet 
   width: 100%;
   background-color: #E9B54A;
   text-align: center;
-  margin: 15rem 0 3rem 0; }
+  margin: 10rem 0 3rem 0; }
   .ft-section.intro .intro-banner img {
     height: 12rem;
     width: auto;
