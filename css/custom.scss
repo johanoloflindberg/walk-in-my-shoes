@@ -132,3 +132,17 @@ ul.risk {
 
 	}
 }
+
+p.balance {
+
+	font-size: 1.6em;
+	font-weight: bold;
+	color: #0858A4;
+
+	.var-balance {
+		&::before {
+			content: "$";
+		}
+	}
+
+}

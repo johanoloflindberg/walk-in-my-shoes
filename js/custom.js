@@ -188,7 +188,7 @@ jQuery(document).ready( function( $ ) {
 	}
 
 	var setBudgetDisplay = function() {
-		$( '#footer .var-balance' ).text( numberWithCommas( budget.balance ) );
+		$( '.var-balance' ).text( numberWithCommas( budget.balance ) );
 	}
 
 	var numberWithCommas = function(x) {

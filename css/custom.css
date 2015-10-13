@@ -577,3 +577,10 @@ ul.risk {
     width: auto;
     height: auto;
     /*margin-left: - $riskWidth/2 ;*/ }
+
+p.balance {
+  font-size: 1.6em;
+  font-weight: bold;
+  color: #0858A4; }
+  p.balance .var-balance::before {
+    content: "$"; }
