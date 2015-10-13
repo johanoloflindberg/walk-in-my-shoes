@@ -6,7 +6,7 @@ header {
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 100010;
+  z-index: 100100;
   transition: transform 0.6s cubic-bezier(0.56, 0.1, 0.34, 0.91); }
   .hide-header header {
     -webkit-transform: translateY(-10rem);
@@ -74,10 +74,10 @@ button.js-menu {
     transition: 0.2s background linear 0.1s, 0.2s top linear, 0.2s transform linear 0.2s; }
 
 nav {
-  width: 25rem;
+  width: 32rem;
   height: 38rem;
   background: #0858A4;
-  z-index: 100001;
+  z-index: 100020;
   position: fixed;
   left: 0;
   top: 0;
@@ -93,9 +93,9 @@ nav {
     padding: 0; }
     nav ul li {
       text-align: center;
-      margin: 2rem 0; }
+      margin: 1rem 0; }
       nav ul li a {
-        padding: 20px 5px;
+        padding: 2rem .6rem;
         display: block;
         font-size: 3em;
         font-weight: bold; }
@@ -104,7 +104,7 @@ nav {
         nav ul li a:active {
           background: rgba(0, 0, 0, 0.2); }
         nav ul li a.donate {
-          margin: 0 auto;
+          margin: 1rem auto;
           font-size: 3em;
           padding: .5rem 4rem; }
         nav ul li a.logo-united-way img {
@@ -134,13 +134,14 @@ nav {
 
 #footer {
   position: fixed;
-  bottom: 0;
+  bottom: 0rem;
   background-color: #fff;
   height: 5rem;
   line-height: 5rem;
   width: 100%;
   z-index: 100010;
-  transition: transform 0.6s cubic-bezier(0.56, 0.1, 0.34, 0.91); }
+  transition: transform 0.6s cubic-bezier(0.56, 0.1, 0.34, 0.91);
+  transform: translateY(0); }
   .hide-footer #footer {
     transform: translateY(10rem); }
   #footer .inner {
@@ -165,7 +166,7 @@ nav {
     #footer .budget-toggle .left {
       position: absolute;
       left: 0;
-      top: 0;
+      top: -.5rem;
       width: 4.5rem; }
     #footer .budget-toggle .right {
       padding: 0 1rem;
@@ -191,7 +192,7 @@ nav {
       margin-top: -.5rem; }
 
 #budget-table {
-  width: 30rem;
+  width: 32rem;
   height: 30rem;
   background: #F3EAD4;
   padding-top: 0rem;
@@ -203,7 +204,7 @@ nav {
   transform: translateY(0);
   transition: transform 0.6s cubic-bezier(0.56, 0.1, 0.34, 0.91); }
   .budget-open #budget-table {
-    transform: translateY(-40rem); }
+    transform: translateY(-35rem); }
   #budget-table table {
     margin: 0 auto;
     width: 100%; }
@@ -245,13 +246,13 @@ body.amanda #feet, body.james #feet, body.dave #feet {
   transform: translateY(-5rem); }
 
 body.amanda #feet .amanda {
-  transform: translateY(6rem); }
+  transform: translateY(4rem); }
 
 body.james #feet .james {
-  transform: translateY(6rem); }
+  transform: translateY(4rem); }
 
 body.dave #feet .dave {
-  transform: translateY(6rem); }
+  transform: translateY(4rem); }
 
 body.intro #feet .james {
   transform: translateY(0); }
@@ -394,6 +395,19 @@ body.hide-feet #feet .amanda, body.hide-feet #feet .james, body.hide-feet #feet 
   100% {
     margin-top: 3px;
     margin-left: 0px; } }
+/* Layout */
+.ft-page {
+  padding-top: 5rem;
+  margin-top: 0;
+  font-size: 1.6em;
+  max-height: 100%;
+  overflow: hidden; }
+  .ft-page h2 {
+    font-size: 1.4em;
+    font-weight: bold; }
+  .ft-page p {
+    margin: 1em 0; }
+
 .intro-page .inner {
   background-color: rgba(125, 125, 125, 0.6);
   margin-top: 8rem; }
@@ -405,7 +419,7 @@ body.hide-feet #feet .amanda, body.hide-feet #feet .james, body.hide-feet #feet 
   position: relative;
   max-height: 75%; }
 .intro-page .innerer, .ft-section.amanda .ft-page .innerer, .ft-section.james .ft-page .innerer, .ft-section.dave .ft-page .innerer {
-  padding: 2rem 2rem;
+  padding: 1rem;
   height: 100%;
   line-height: 1.3;
   overflow: auto; }
@@ -414,13 +428,13 @@ body.hide-feet #feet .amanda, body.hide-feet #feet .james, body.hide-feet #feet 
   background-color: transparent;
   margin-top: 1rem; }
 .choose-path .choose-path-img {
-  width: 20rem;
+  width: 18rem;
   height: auto; }
 .choose-path ul {
-  margin-top: 2rem; }
+  margin-top: 1rem; }
   .choose-path ul li a {
     display: block;
-    padding: 3rem 0;
+    padding: 2rem 0;
     font-size: 1.6em;
     font-weight: bold;
     color: #F6EBD3;
@@ -556,19 +570,6 @@ a.donate {
 .logo-large {
   height: 20rem;
   margin: 0 0 2rem 0; }
-
-/* Layout */
-.ft-page {
-  padding-top: 6rem;
-  margin-top: 0;
-  font-size: 1.6em;
-  max-height: 100%;
-  overflow: hidden; }
-  .ft-page h2 {
-    font-size: 1.4em;
-    font-weight: bold; }
-  .ft-page p {
-    margin: 1em 0; }
 
 /* Risk Cards */
 ul.risk {

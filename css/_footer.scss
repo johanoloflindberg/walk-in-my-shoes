@@ -28,7 +28,7 @@ $footerHeight: 5rem;
 
 #footer {
 	position: fixed;
-	bottom: 0;
+	bottom: 0rem;
 
 	background-color: #fff;
 	height: $footerHeight;
@@ -37,6 +37,7 @@ $footerHeight: 5rem;
 	z-index: 100010;
 
 	transition: transform 0.6s cubic-bezier( .56, .1, .34, .91 );
+	transform: translateY( 0 );
 
 	.hide-footer & {
 		transform: translateY( 10rem );
@@ -79,7 +80,7 @@ $footerHeight: 5rem;
 		.left {
 			position: absolute;
 			left:0;
-			top:0;
+			top:-.5rem;
 			width: $leftButtonWidth;
 		}
 
@@ -126,7 +127,7 @@ $footerHeight: 5rem;
 #budget-table {
 	$budgetHeight: 30rem;
 
-	width: 30rem;
+	width: 32rem;
 	height: $budgetHeight;
 	background: #F3EAD4;
 	padding-top: 0rem;
@@ -143,7 +144,7 @@ $footerHeight: 5rem;
 
 
 	.budget-open & {
-		transform: translateY( -($budgetHeight + $footerHeight * 2) );
+		transform: translateY( -($budgetHeight + $footerHeight) );
 	}
 
 	table {

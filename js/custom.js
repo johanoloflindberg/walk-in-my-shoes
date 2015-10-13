@@ -4,10 +4,16 @@
 */
 var forceWidthsForFixedElements = function() {
 	var $ = jQuery,
-		bodyWidth = $(window).width();
+		bodyWidth = $(window).width(),
+		bodyHeight = $(window).height();
 
 	$("header, #footer, #footer-logo").width( bodyWidth ).css( 'width', bodyWidth );
 	$("nav").css('left', bodyWidth - $("nav").width() );
+
+	$("#footer").css('bottom', 'auto').css('top', bodyHeight - $("#footer").height() )
+	$("#budget-table").css('bottom', 'auto').css('top', bodyHeight )
+	$("#budget-table").css('left', bodyWidth - $("#budget-table").width() );
+
 }
 
 jQuery(document).ready( function( $ ) {
@@ -134,6 +140,10 @@ jQuery(document).ready( function( $ ) {
 
 		if ( $('body').hasClass( 'intro' ) ) {
 			resetBudget();
+		}
+
+		if ( $('body').hasClass('menu-open') ) {
+			toggleMenu();
 		}
 	}
 
