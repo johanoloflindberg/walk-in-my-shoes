@@ -110,7 +110,7 @@ button.js-menu {
 }
 
 nav {
-	$menu_height: 50rem;
+	$menu_height: 38rem;
 
 	width: 25rem;
 	height: $menu_height;
@@ -123,7 +123,8 @@ nav {
 	top:0;
 	transform: translateY( -($menu_height + 50) );
 	transition: transform 0.6s cubic-bezier( .56, .1, .34, .91 );
-	padding-top: 6.2rem;
+	padding-top: 5rem;
+	padding-bottom: 3rem;
 
 	.menu-open & {
 		transform: translateY(0);
@@ -141,7 +142,7 @@ nav {
 			a {
 				padding: 20px 5px;
 				display: block;
-				font-size: 3rem;
+				font-size: 3em;
 				font-weight: bold;
 
 				&:hover {
@@ -152,11 +153,17 @@ nav {
 					background: rgba( 0, 0, 0, .2 );
 				}
 				
+				&.donate {
+					margin: 0 auto;
+					font-size: 3em;
+					padding: .5rem 4rem;
+				}
+				&.logo-united-way img {
+					height: 6rem;
+					width: auto;
+				}
 			}
 
-			.donate {
-				margin: 0 auto;
-			}
 		}
 	}
 }
