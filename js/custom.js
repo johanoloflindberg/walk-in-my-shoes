@@ -46,7 +46,7 @@ jQuery(document).ready( function( $ ) {
 	var flowtimeConfig = function() {
 
 		Flowtime.setScrollNavigation( false );
-		Flowtime.showProgress( true );
+		Flowtime.showProgress( false );
 		// Flowtime.fragmentsOnSide( true );
 		// Flowtime.fragmentsOnBack( true );
 		// Flowtime.useHistory( false );
