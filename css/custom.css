@@ -573,13 +573,8 @@ ul.risk {
   margin: 2rem auto; }
   ul.risk li {
     display: none;
-    /*position:absolute;*/
-    background-color: #fff;
-    /*top:0;
-    left: 50%;*/
     width: auto;
-    height: auto;
-    /*margin-left: - $riskWidth/2 ;*/ }
+    height: auto; }
 
 p.balance {
   font-size: 1.6em;
