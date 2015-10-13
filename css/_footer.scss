@@ -116,9 +116,6 @@ $footerHeight: 5rem;
 			min-width: 7rem;
 			margin-top: -.5rem;
 
-			&::before {
-				content: "$";
-			}
 		}
 
 	}
@@ -193,7 +190,6 @@ $footerHeight: 5rem;
 		.balance {
 			font-weight: bold;
 			width: $balanceWidth;
-			&::before { content: "$"; }
 		}
 	}
 

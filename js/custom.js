@@ -166,8 +166,8 @@ jQuery(document).ready( function( $ ) {
 				'<tr>' +
 					'<td class="date">' + entry.date + '</td>' +
 					'<td class="description">' + entry.description + '</td>' +
-					'<td class="change">' + numberWithCommas( entry.amount ) + '</td>' +
-					'<td class="balance">' + numberWithCommas( budget.balance ) + '</td>' +
+					'<td class="change">' + dollarFormat( entry.amount ) + '</td>' +
+					'<td class="balance">' + dollarFormat( budget.balance ) + '</td>' +
 				'</tr>' 
 			);
 
@@ -188,11 +188,21 @@ jQuery(document).ready( function( $ ) {
 	}
 
 	var setBudgetDisplay = function() {
-		$( '.var-balance' ).text( numberWithCommas( budget.balance ) );
+		$( '.var-balance' ).text( dollarFormat( budget.balance ) );
 	}
 
-	var numberWithCommas = function(x) {
-		return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+	var dollarFormat = function(x) {
+		// Commas
+		x = x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
+		// Dollar sign
+		if ( "-" == x.substring( 0, 1 ) ) {
+			x = "- $" + x.substring( 1, x.length );
+		}else {
+			x = "$" + x;
+		}
+
+		return x;
 	}
 
 	var footerName = function( $page ) {

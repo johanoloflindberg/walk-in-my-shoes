@@ -180,8 +180,6 @@ nav {
     #footer .budget-toggle .var-balance {
       min-width: 7rem;
       margin-top: -.5rem; }
-      #footer .budget-toggle .var-balance::before {
-        content: "$"; }
 
 #budget-table {
   width: 30rem;
@@ -228,8 +226,6 @@ nav {
     #budget-table table .balance {
       font-weight: bold;
       width: 18%; }
-      #budget-table table .balance::before {
-        content: "$"; }
 
 /* Feet */
 #feet .amanda, #feet .james, #feet .dave {
@@ -582,5 +578,3 @@ p.balance {
   font-size: 1.6em;
   font-weight: bold;
   color: #0858A4; }
-  p.balance .var-balance::before {
-    content: "$"; }
