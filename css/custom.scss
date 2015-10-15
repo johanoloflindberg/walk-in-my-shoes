@@ -4,6 +4,7 @@
 @import 'feet';
 
 @import 'backgrounds';
+@import 'css-load';
 
 
 html {
@@ -87,13 +88,24 @@ ul.risk {
 
 	height: $riskHeight;
 	width: $riskWidth;
-	margin: 2rem auto;
+	margin: 1rem auto;
 
 	li {
 		display:none;
 
 		width: $riskWidth;
 		height: $riskHeight;
+		min-height: 2rem;
+
+		&.front {
+			display: block;
+			position: absolute;
+			width: 100%;
+		}
+
+		&.back {
+			display:block;
+		}
 	}
 }
 
@@ -102,4 +114,51 @@ ul.choices {
 		list-style-type: disc;
 		list-style-position: inside;
 	}
+}
+
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000;
+}
+	/* flip the pane when hovered */
+	.flip-container.flip .flipper {
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	width: auto;
+	height: auto;
+}
+.back {
+	left: -50%;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transition-delay: 5s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
 }

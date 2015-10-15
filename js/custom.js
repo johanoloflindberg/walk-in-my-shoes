@@ -242,15 +242,26 @@ jQuery(document).ready( function( $ ) {
 
 	var riskCard = function( $page ) {
 		var i = 0,
-			$cards = $page.find( "ul.risk li" ),
+			$cards = $page.find( "ul.risk li:not(.front)" ),
 			$activeCard;
 
-		$activeCard = $cards.random().first();
+		if ( $cards.filter('.back').length == 0 ) {
 
-		$activeCard.show().siblings().hide();
+			$activeCard = $cards.random().first();
 
-		doBudget( $activeCard );
+			$activeCard
+				.addClass('back')
+				.width( $activeCard.parent().width() );
 
+			$activeCard.parent()
+				.height( $activeCard.height() );
+
+			$activeCard.parents( '.flip-container' )
+				.addClass('flip');
+
+			doBudget( $activeCard );
+
+		}
 	};
 
 	init();
