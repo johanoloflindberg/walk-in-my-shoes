@@ -39,7 +39,7 @@ jQuery(document).ready( function( $ ) {
 		resetBudget();
 		onNavigation();
 
-		$(window).resize( setTimeout( forceWidthsForFixedElements, 100 ) );
+		$(window).resize( function(){ setTimeout( forceWidthsForFixedElements, 100 ) } );
 		$(window).load( forceWidthsForFixedElements );
 	}
 
