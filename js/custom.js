@@ -215,7 +215,15 @@ jQuery(document).ready( function( $ ) {
 	}
 
 	var setBudgetDisplay = function() {
+		var $balanceDisplays = $('#footer .budget-toggle, h2.balance');
+
 		$( '.var-balance' ).text( dollarFormat( budget.balance ) );
+
+		if ( budget.balance < 0 ) {
+			$balanceDisplays.addClass( 'negative' );
+		}else {
+			$balanceDisplays.removeClass( 'negative' );
+		}
 	}
 
 	var dollarFormat = function(x) {

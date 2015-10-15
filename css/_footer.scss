@@ -60,12 +60,13 @@ $footerHeight: 5rem;
 		margin: .7rem 0 0 0 ;
 		.hamburger {
 			&, &::before, &::after {
-				background: #0858A4;
+				background-color: #0858A4;
+				transition: 2s background-color linear;
 			}
 		}
 	}
 	.active button.js-menu .hamburger {
-		background: 0;
+		background-color: 0;
 	}
 
 	.budget-toggle {
@@ -80,7 +81,7 @@ $footerHeight: 5rem;
 		.left {
 			position: absolute;
 			left:0;
-			top:-.5rem;
+			top:0;
 			width: $leftButtonWidth;
 		}
 
@@ -88,6 +89,7 @@ $footerHeight: 5rem;
 			padding: 0 1rem;
 			position: relative;
 			background-color: #0858A4;
+			transition: .5s background-color linear;
 			color: #fff;
 			height: 100%;
 			margin:0;
@@ -121,7 +123,25 @@ $footerHeight: 5rem;
 
 	}
 
+	.negative {
+		.right {
+			background-color: rgb(162,6,37);
+		}
+		button.js-menu {
+			.hamburger {
+				&, &::before, &::after {
+					background-color: rgb(162,6,37);
+				}
+			}
+			&.active button.js-menu .hamburger {
+				background-color: transparent;
+			}
+		}
+	}
+}
 
+.ft-page .balance.negative .var-balance {
+	color: rgb(162,6,37);
 }
 
 #budget-table {

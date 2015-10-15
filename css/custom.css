@@ -156,9 +156,10 @@ nav {
     cursor: pointer;
     margin: 0.7rem 0 0 0; }
     #footer button.js-menu .hamburger, #footer button.js-menu .hamburger::before, #footer button.js-menu .hamburger::after {
-      background: #0858A4; }
+      background-color: #0858A4;
+      transition: 2s background-color linear; }
   #footer .active button.js-menu .hamburger {
-    background: 0; }
+    background-color: 0; }
   #footer .budget-toggle {
     float: right;
     position: relative;
@@ -166,12 +167,13 @@ nav {
     #footer .budget-toggle .left {
       position: absolute;
       left: 0;
-      top: -.5rem;
+      top: 0;
       width: 4.5rem; }
     #footer .budget-toggle .right {
       padding: 0 1rem;
       position: relative;
       background-color: #0858A4;
+      transition: .5s background-color linear;
       color: #fff;
       height: 100%;
       margin: 0;
@@ -190,6 +192,15 @@ nav {
     #footer .budget-toggle .var-balance {
       min-width: 7rem;
       margin-top: -.5rem; }
+  #footer .negative .right {
+    background-color: #a20625; }
+  #footer .negative button.js-menu .hamburger, #footer .negative button.js-menu .hamburger::before, #footer .negative button.js-menu .hamburger::after {
+    background-color: #a20625; }
+  #footer .negative button.js-menu.active button.js-menu .hamburger {
+    background-color: transparent; }
+
+.ft-page .balance.negative .var-balance {
+  color: #a20625; }
 
 #budget-table {
   width: 32rem;
