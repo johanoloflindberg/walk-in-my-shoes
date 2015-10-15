@@ -779,6 +779,9 @@ a.button {
     		border-left: 1px solid darken( #0858A4, 30% );
     		border-right: 1px solid darken( #0858A4, 30% );*/ }
 
+a.button-risk {
+  background-color: #FAB149; }
+
 a.donate {
   background-color: #ED4F39;
   /*	&:active {
