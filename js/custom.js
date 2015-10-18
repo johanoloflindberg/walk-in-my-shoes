@@ -35,7 +35,6 @@ jQuery(document).ready( function( $ ) {
 		Flowtime.start();
 
 		$budgetToggles.on( 'click', toggleBudget );
-		$budgetButtons.on( 'click', doBudget );
 		$introButton.on( 'click', doneLoading );
 		$('#feet').on( 'click', animateFeet );
 
@@ -124,6 +123,8 @@ jQuery(document).ready( function( $ ) {
 
 		riskCard( $page );
 
+		doBudget( $page );
+
 		// console.log( 'section', e.section, 'sectionIndex', e.sectionIndex );
 		// console.log( 'page', e.page, 'pageIndex', e.pageIndex );
 		// console.log( 'pastSectionIndex', e.pastSectionIndex, 'pastPageIndex', e.pastPageIndex );
@@ -193,9 +194,16 @@ jQuery(document).ready( function( $ ) {
 		$('body').removeClass('budget-open');
 	}
 
-	var doBudget = function() {
-		var entry, $row,
-			$page = $(this).parents('.ft-page').not('.budget-done');
+	var doBudget = function( $page ) {
+		var entry, $row;
+
+		// Calculate based on previous slide (change after clicking "continue")
+		// Not using click event because... iOS issues.
+		$page = $page.prev();
+		
+		if ( $page.hasClass('budget-done') ) {
+			return;
+		}
 
 		entry = $page.data( 'budget-entry' ) || $page.find('li.back').data( 'budget-entry' );
 
