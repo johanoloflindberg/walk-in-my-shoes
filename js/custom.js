@@ -2,6 +2,29 @@
 	iOS miscalculates viewport width for fixed elements.
 	See http://stackoverflow.com/questions/29315889/ios-safari-100-width-fixed-position-header-wider-than-viewport
 */
+
+var $menuButton = $('header button'),
+	toggleMenuTimout;
+
+var toggleMenu = function() {
+
+	// iOS was opening and closing menu rapidly
+	clearTimeout( toggleMenuTimout );
+
+	if ( $menuButton.hasClass( 'active' ) ) {
+
+		$menuButton.removeClass('active');
+		$('body').removeClass('menu-open');
+
+	} else if ( ! $( this ).hasClass('flowtime') ) {
+
+		$menuButton.addClass('active');
+		$('body').addClass('menu-open');
+		
+	}
+
+};
+
 var forceWidthsForFixedElements = function() {
 	var $ = jQuery,
 		bodyWidth = $(window).width(),
@@ -20,7 +43,6 @@ jQuery(document).ready( function( $ ) {
 
 	var 
 		$menuToggles = $('header button, div.flowtime, nav a'),
-		$menuButton = $('header button'),
 		$introButton = $('.intro .ft-page:first a.button')
 		$budgetButtons = $('.james, .amanda, .dave').find('a.button'),
 		$budgetToggles = $('#footer .budget-toggle'),
@@ -33,11 +55,14 @@ jQuery(document).ready( function( $ ) {
 		flowtimeConfig();
 		Flowtime.start();
 
-		$menuToggles.on( 'click', toggleMenu );
 		$budgetToggles.on( 'click', toggleBudget );
 		$budgetButtons.on( 'click', doBudget );
 		$introButton.on( 'click', doneLoading );
 		$('#feet').on( 'click', animateFeet );
+		
+		$menuToggles.on( 'click', function(){
+			toggleMenuTimout = setTimeout( toggleMenu, 500 );
+		} );
 
 		Flowtime.addEventListener("flowtimenavigation", onNavigation, false);
 		resetBudget();
@@ -63,22 +88,6 @@ jQuery(document).ready( function( $ ) {
 		Flowtime.setTouchNavigation( false );
 
 	}
-
-	var toggleMenu = function() {
-
-		if ( $menuButton.hasClass( 'active' ) ) {
-
-			$menuButton.removeClass('active');
-			$('body').removeClass('menu-open');
-
-		} else if ( ! $( this ).hasClass('flowtime') ) {
-
-			$menuButton.addClass('active');
-			$('body').addClass('menu-open');
-			
-		}
-
-	};
 
 	var toggleBudget = function() {
 		if ( $budgetButton.hasClass( 'active' ) ) {
