@@ -794,10 +794,19 @@ a.donate {
     background-color: #df2d14; }
 
 /* Risk Cards */
+.risk-card .inner {
+  min-height: 14rem; }
+.risk-card a.button {
+  opacity: 0;
+  transition: opacity .25s ease-in-out;
+  transition: 0.6s;
+  transition-delay: 5s; }
+
 ul.risk {
   display: block;
   position: relative;
   height: auto;
+  min-height: 2rem;
   width: auto;
   margin: 1rem auto; }
   ul.risk li {
@@ -805,52 +814,25 @@ ul.risk {
     width: auto;
     height: auto;
     min-height: 2rem; }
-    ul.risk li.front {
+    ul.risk li.front, ul.risk li.back {
       display: block;
       position: absolute;
-      width: 100%; }
+      width: 100%;
+      transition: opacity .25s ease-in-out;
+      transition: 0.6s;
+      transition-delay: 5s; }
     ul.risk li.back {
-      display: block; }
+      opacity: 0; }
+
+.flip ul.risk li.front {
+  opacity: 0; }
+.flip ul.risk li.back {
+  opacity: 1; }
+.flip a.button {
+  opacity: 1; }
 
 ul.choices li {
   list-style-type: disc;
   list-style-position: inside; }
 
 /* entire container, keeps perspective */
-.flip-container {
-  perspective: 1000; }
-
-/* flip the pane when hovered */
-.flip-container.flip .flipper {
-  transform: rotateY(180deg); }
-
-.flip-container, .front, .back {
-  width: auto;
-  height: auto; }
-
-.back {
-  left: -50%; }
-
-/* flip speed goes here */
-.flipper {
-  transition: 0.6s;
-  transition-delay: 5s;
-  transform-style: preserve-3d;
-  position: relative; }
-
-/* hide back of pane during swap */
-.front, .back {
-  backface-visibility: hidden;
-  position: absolute;
-  top: 0;
-  left: 0; }
-
-/* front pane, placed above back */
-.front {
-  z-index: 2;
-  /* for firefox 31 */
-  transform: rotateY(0deg); }
-
-/* back, initially hidden pane */
-.back {
-  transform: rotateY(180deg); }

@@ -82,14 +82,28 @@ a.donate {
 
 
 /* Risk Cards */
+.risk-card {
+	.inner {
+		min-height: 14rem;
+	}
+	a.button {
+		opacity: 0;
+		transition: opacity .25s ease-in-out;
+		transition: 0.6s;
+		transition-delay: 5s;
+	}
+}
+
 ul.risk {
 	$riskWidth: auto;
 	$riskHeight: auto;
+	$riskMinHeight: 2rem;
 
 	display:block;
 	position: relative;
 
 	height: $riskHeight;
+	min-height: $riskMinHeight;
 	width: $riskWidth;
 	margin: 1rem auto;
 
@@ -98,19 +112,33 @@ ul.risk {
 
 		width: $riskWidth;
 		height: $riskHeight;
-		min-height: 2rem;
+		min-height: $riskMinHeight;
 
-		&.front {
+		&.front, &.back {
 			display: block;
 			position: absolute;
 			width: 100%;
+			transition: opacity .25s ease-in-out;
+			transition: 0.6s;
+			transition-delay: 5s;
 		}
 
 		&.back {
-			display:block;
+			opacity: 0;
 		}
 	}
 }
+
+.flip {
+	ul.risk li {
+		&.front { opacity: 0; }
+		&.back { opacity: 1; }
+	}
+	a.button {
+		opacity: 1;
+	}
+}
+
 
 ul.choices {
 	li {
@@ -120,48 +148,48 @@ ul.choices {
 }
 
 /* entire container, keeps perspective */
-.flip-container {
-	perspective: 1000;
-}
-	/* flip the pane when hovered */
-	.flip-container.flip .flipper {
-		transform: rotateY(180deg);
-	}
-
-.flip-container, .front, .back {
-	width: auto;
-	height: auto;
-}
-.back {
-	left: -50%;
-}
-
-/* flip speed goes here */
-.flipper {
-	transition: 0.6s;
-	transition-delay: 5s;
-	transform-style: preserve-3d;
-
-	position: relative;
-}
-
-/* hide back of pane during swap */
-.front, .back {
-	backface-visibility: hidden;
-
-	position: absolute;
-	top: 0;
-	left: 0;
-}
-
-/* front pane, placed above back */
-.front {
-	z-index: 2;
-	/* for firefox 31 */
-	transform: rotateY(0deg);
-}
-
-/* back, initially hidden pane */
-.back {
-	transform: rotateY(180deg);
-}
+//.flip-container {
+//	perspective: 1000;
+//}
+//	/* flip the pane when hovered */
+//	.flip-container.flip .flipper {
+//		transform: rotateY(180deg);
+//	}
+//
+//.flip-container, .front, .back {
+//	width: auto;
+//	height: auto;
+//}
+//.back {
+//	left: -50%;
+//}
+//
+///* flip speed goes here */
+//.flipper {
+//	transition: 0.6s;
+//	transition-delay: 5s;
+//	transform-style: preserve-3d;
+//
+//	position: relative;
+//}
+//
+///* hide back of pane during swap */
+//.front, .back {
+//	backface-visibility: hidden;
+//
+//	position: absolute;
+//	top: 0;
+//	left: 0;
+//}
+//
+///* front pane, placed above back */
+//.front {
+//	z-index: 2;
+//	/* for firefox 31 */
+//	transform: rotateY(0deg);
+//}
+//
+///* back, initially hidden pane */
+//.back {
+//	transform: rotateY(180deg);
+//}
