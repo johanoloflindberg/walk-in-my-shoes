@@ -745,6 +745,10 @@ html {
   color: #F6EAD4;
   background-color: #646464; }
 
+.loading #feet .amanda, .loading #feet dave, .loading nav, .loading header, .loading #budget-table, .loading #footer {
+  display: none !important;
+  visibility: hidden !important; }
+
 .ft-default-progress {
   bottom: 7rem; }
 

@@ -21,6 +21,7 @@ jQuery(document).ready( function( $ ) {
 	var 
 		$menuToggles = $('header button, div.flowtime, nav a'),
 		$menuButton = $('header button'),
+		$introButton = $('.intro .ft-page:first a.button')
 		$budgetButtons = $('.james, .amanda, .dave').find('a.button'),
 		$budgetToggles = $('#footer .budget-toggle'),
 		$budgetButton = $('#footer .budget-toggle'),
@@ -35,6 +36,7 @@ jQuery(document).ready( function( $ ) {
 		$menuToggles.click( toggleMenu );
 		$budgetToggles.click( toggleBudget );
 		$budgetButtons.click( doBudget );
+		$introButton.click( doneLoading );
 		$('#feet').click( animateFeet );
 
 		Flowtime.addEventListener("flowtimenavigation", onNavigation, false);
@@ -90,6 +92,10 @@ jQuery(document).ready( function( $ ) {
 			$('body').addClass('budget-open');
 			
 		}
+	}
+
+	var doneLoading = function(){
+		$('body').removeClass('loading');
 	}
 
 
@@ -148,6 +154,11 @@ jQuery(document).ready( function( $ ) {
 		if ( $('body').hasClass('menu-open') ) {
 			toggleMenu();
 		}
+
+		if ( ! $page.hasClass('first') ) {
+			doneLoading();
+		}
+		
 	}
 
 	var animateFeet = function ( e ) {

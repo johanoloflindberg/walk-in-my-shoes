@@ -18,6 +18,13 @@ html {
 	background-color: #646464;
 }
 
+.loading {
+	#feet .amanda, #feet dave, nav, header, #budget-table, #footer {
+		display:none !important;
+		visibility: hidden !important;
+	}
+}
+
 .ft-default-progress {
 	bottom: 7rem;
 }
