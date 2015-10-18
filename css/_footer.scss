@@ -132,9 +132,9 @@ $footerHeight: 5rem;
 					background-color: rgb(162,6,37);
 				}
 			}
-			&.active button.js-menu .hamburger {
-				background-color: transparent;
-			}
+		}
+		&.active button.js-menu .hamburger {
+			background-color: transparent;
 		}
 	}
 }

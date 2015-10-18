@@ -195,7 +195,7 @@ nav {
     background-color: #a20625; }
   #footer .negative button.js-menu .hamburger, #footer .negative button.js-menu .hamburger::before, #footer .negative button.js-menu .hamburger::after {
     background-color: #a20625; }
-  #footer .negative button.js-menu.active button.js-menu .hamburger {
+  #footer .negative.active button.js-menu .hamburger {
     background-color: transparent; }
 
 .ft-page .balance.negative .var-balance {

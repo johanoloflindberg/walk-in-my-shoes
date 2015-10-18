@@ -196,10 +196,6 @@ jQuery(document).ready( function( $ ) {
 
 	var doBudget = function( $page ) {
 		var entry, $row;
-
-		// Calculate based on previous slide (change after clicking "continue")
-		// Not using click event because... iOS issues.
-		$page = $page.prev();
 		
 		if ( $page.hasClass('budget-done') ) {
 			return;
@@ -207,45 +203,53 @@ jQuery(document).ready( function( $ ) {
 
 		entry = $page.data( 'budget-entry' ) || $page.find('li.back').data( 'budget-entry' );
 
+		$page.addClass('budget-done');
+
+		budget.balance = 0;
+
+		if ( budget.entries.length > 0 ) {
+
+			$budgetTable.html( '' );
+
+			budget.entries.forEach( function( singleEntry ){
+
+				budget.balance = budget.balance + singleEntry.amount;
+
+				$row = $( 
+					'<tr>' +
+						'<td class="date">' + singleEntry.date + '</td>' +
+						'<td class="description">' + singleEntry.description + '</td>' +
+						'<td class="change">' + dollarFormat( singleEntry.amount ) + '</td>' +
+						'<td class="balance">' + dollarFormat( budget.balance ) + '</td>' +
+					'</tr>' 
+				);
+
+				if ( singleEntry.amount > 0 ) {
+					$row.find('td.change').addClass('positive');
+				}else {
+					$row.find('td.change').addClass('negative');
+				}
+
+				$budgetTable.append( $row );
+
+			} );
+			
+		}else {
+			
+			$budgetTable.html( '<tr><td colspan="4">No budget entries yet.</td></tr>' );
+
+		}
+
+		setBudgetDisplay();
+
+		// Add new budget item after displaying old budget
+		// Causes update to not occur until next slide
 		if ( undefined === entry ) {
 			console.log( "No budget change." );
 			return;
+		}else {
+			budget.entries.push( entry );
 		}
-
-		$page.addClass('budget-done');
-
-		budget.entries.push( entry );
-
-		budget.balance = 0;
-		$budgetTable.html( '' );
-
-		budget.entries.forEach( function( entry ){
-
-			budget.balance = budget.balance + entry.amount;
-
-			$row = $( 
-				'<tr>' +
-					'<td class="date">' + entry.date + '</td>' +
-					'<td class="description">' + entry.description + '</td>' +
-					'<td class="change">' + dollarFormat( entry.amount ) + '</td>' +
-					'<td class="balance">' + dollarFormat( budget.balance ) + '</td>' +
-				'</tr>' 
-			);
-
-			if ( entry.amount > 0 ) {
-				$row.find('td.change').addClass('positive');
-			}else {
-				$row.find('td.change').addClass('negative');
-			}
-
-			$budgetTable.append( $row );
-
-		} );
-
-		console.log( entry );
-		console.log( budget.entries );
-
-		setBudgetDisplay();
 	}
 
 	var setBudgetDisplay = function() {
