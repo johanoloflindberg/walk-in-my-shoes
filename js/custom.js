@@ -33,11 +33,11 @@ jQuery(document).ready( function( $ ) {
 		flowtimeConfig();
 		Flowtime.start();
 
-		$menuToggles.click( toggleMenu );
-		$budgetToggles.click( toggleBudget );
-		$budgetButtons.click( doBudget );
-		$introButton.click( doneLoading );
-		$('#feet').click( animateFeet );
+		$menuToggles.on( 'click touchstart', toggleMenu );
+		$budgetToggles.on( 'click touchstart', toggleBudget );
+		$budgetButtons.on( 'click touchstart', doBudget );
+		$introButton.on( 'click touchstart', doneLoading );
+		$('#feet').on( 'click touchstart', animateFeet );
 
 		Flowtime.addEventListener("flowtimenavigation", onNavigation, false);
 		resetBudget();
