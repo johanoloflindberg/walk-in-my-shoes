@@ -131,13 +131,15 @@ jQuery(document).ready( function( $ ) {
 		var sectionClasses = [ 'amanda', 'dave', 'james', 'intro', 'outro' ],
 			pageClasses = [ 'hide-header', 'hide-footer', 'hide-feet', 'show-footer-logo' ];
 
-		sectionClasses.forEach( function( name ){
-			if ( -1 !== location.hash.indexOf( name ) ) {
-				$('body').addClass( name );
-			}else {
-				$('body').removeClass( name );
-			}
-		} ); 
+		if ( location.hash.length > 0 ) {
+			sectionClasses.forEach( function( name ){
+				if ( -1 !== location.hash.indexOf( name ) ) {
+					$('body').addClass( name );
+				}else {
+					$('body').removeClass( name );
+				}
+			} ); 
+		}
 
 		pageClasses.forEach( function( name ){
 			if ( $page.hasClass( name ) ) {
@@ -158,7 +160,7 @@ jQuery(document).ready( function( $ ) {
 		if ( ! $page.hasClass('first') ) {
 			doneLoading();
 		}
-		
+
 	}
 
 	var animateFeet = function ( e ) {
