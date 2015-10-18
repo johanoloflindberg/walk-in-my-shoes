@@ -154,12 +154,12 @@ nav {
   #footer button.js-menu {
     float: none;
     cursor: pointer;
-    margin: 0.7rem 0 0 0; }
+    margin: 0.7rem 0 0 0;
+    position: absolute; }
     #footer button.js-menu .hamburger, #footer button.js-menu .hamburger::before, #footer button.js-menu .hamburger::after {
-      background-color: #0858A4;
-      transition: 2s background-color linear; }
+      background-color: #0858A4; }
   #footer .active button.js-menu .hamburger {
-    background-color: 0; }
+    background-color: transparent; }
   #footer .budget-toggle {
     float: right;
     position: relative;
@@ -173,7 +173,6 @@ nav {
       padding: 0 1rem;
       position: relative;
       background-color: #0858A4;
-      transition: .5s background-color linear;
       color: #fff;
       height: 100%;
       margin: 0;
