@@ -21,6 +21,7 @@ jQuery(document).ready( function( $ ) {
 	var 
 		$menuToggles = $('header button, div.flowtime, nav a'),
 		$menuButton = $('header button'),
+		$budgetButtons = $('.james, .amanda, .dave').find('a.button'),
 		$budgetToggles = $('#footer .budget-toggle'),
 		$budgetButton = $('#footer .budget-toggle'),
 		$budgetTable = $('#budget-table table tbody'),
@@ -33,6 +34,7 @@ jQuery(document).ready( function( $ ) {
 
 		$menuToggles.click( toggleMenu );
 		$budgetToggles.click( toggleBudget );
+		$budgetButtons.click( doBudget );
 		$('#feet').click( animateFeet );
 
 		Flowtime.addEventListener("flowtimenavigation", onNavigation, false);
@@ -104,7 +106,6 @@ jQuery(document).ready( function( $ ) {
 		setBodyClass( $page );
 		animateFeet();
 
-		doBudget( $page );
 		footerName( $page );
 
 		riskCard( $page );
@@ -171,14 +172,18 @@ jQuery(document).ready( function( $ ) {
 		$('body').removeClass('budget-open');
 	}
 
-	var doBudget = function( $item ) {
-		var entry = $item.data( 'budget-entry' ),
-			$row;
+	var doBudget = function() {
+		var entry, $row,
+			$page = $(this).parents('.ft-page').not('.budget-done');
+
+		entry = $page.data( 'budget-entry' ) || $page.find('li.back').data( 'budget-entry' );
 
 		if ( undefined === entry ) {
 			console.log( "No budget change." );
 			return;
 		}
+
+		$page.addClass('budget-done');
 
 		budget.entries.push( entry );
 
@@ -266,8 +271,6 @@ jQuery(document).ready( function( $ ) {
 
 			$activeCard.parents( '.flip-container' )
 				.addClass('flip');
-
-			doBudget( $activeCard );
 
 		}
 	};
