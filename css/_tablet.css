@@ -1,0 +1,14 @@
+@media (min-width: 1024px) {
+  #feet {
+    top: 2rem; }
+
+  body.intro .intro-banner {
+    margin-top: 30rem; }
+  body.intro #feet .james, body.intro #feet .amanda, body.intro #feet .dave {
+    transform: translateY(0);
+    display: block;
+    visibility: visible; }
+  body.intro #feet .james {
+    left: 30%; }
+  body.intro #feet .dave {
+    right: 30%; } }

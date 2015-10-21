@@ -1,0 +1,46 @@
+@media ( min-width: 1024px ) {
+	#feet {
+		top: 2rem;
+	}
+	
+	body.intro {
+
+		.ft-section.intro .intro-banner {
+			margin-top: 20rem;
+			margin-bottom: 7rem;
+		}
+
+		#feet {
+
+			.james, .amanda, .dave {
+				transform: translateY( 0 );
+				display:block;
+				visibility: visible;
+			}
+
+			.james {
+				left: 30%;
+			}
+			.dave {
+				right: 30%;
+			}
+		}
+
+		.ft-page:not(.first) .inner {
+			margin-top: 18rem;
+			padding-top: 2rem;
+			padding-bottom: 3rem;
+		}
+		.ft-page:not(.first) .innerer {
+			max-width: 80rem;
+			margin: 0 auto;
+		}
+	}
+
+	.ft-section .ft-page {
+		p {
+			margin: 1.5em 0;
+		}
+	}
+
+}

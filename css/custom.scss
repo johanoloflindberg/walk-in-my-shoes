@@ -19,9 +19,18 @@ html {
 }
 
 .loading {
-	#feet .amanda, #feet dave, nav, header, #budget-table, #footer {
+	nav, header, #budget-table, #footer {
 		display:none !important;
 		visibility: hidden !important;
+	}
+}
+
+@media (max-width: 1024px) {
+	.loading {
+		#feet .amanda, #feet .dave {
+			display:none !important;
+			visibility: hidden !important;
+		}
 	}
 }
 
@@ -206,3 +215,5 @@ ul.choices {
 //.back {
 //	transform: rotateY(180deg);
 //}
+
+@import 'tablet';
