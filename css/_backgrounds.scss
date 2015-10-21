@@ -130,11 +130,18 @@
 	}
 }
 
+.ft-page.outro {
+	.inner {
+		
+	}
+}
+
 .ft-section .outro {
 	&.ft-page {
 		.inner {
-			margin-top: -4rem;
-			margin-bottom: -4rem;
+			margin-top: 0 !important;
+			margin-bottom: 0;
+			height: 100%;
 
 			.innerer {
 				padding: 6rem 2rem 14rem 2rem;
