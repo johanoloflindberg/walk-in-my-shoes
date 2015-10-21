@@ -263,7 +263,7 @@ nav {
   transition: transform 0.6s cubic-bezier(0.56, 0.1, 0.34, 0.91); }
 
 body.amanda #feet, body.james #feet, body.dave #feet {
-  transform: translateY(25rem); }
+  transform: translateY(-5rem); }
 
 body.amanda #feet .amanda {
   transform: translateY(34rem); }
@@ -538,7 +538,7 @@ body.hide-feet #feet .amanda, body.hide-feet #feet .james, body.hide-feet #feet 
   width: 100%;
   background-color: #E9B54A;
   text-align: center;
-  margin: 10rem 0 3rem 0; }
+  margin: 9rem 0 2rem 0; }
   .ft-section.intro .intro-banner img {
     height: 12rem;
     width: auto;

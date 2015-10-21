@@ -11,7 +11,7 @@
 
 body.amanda, body.james, body.dave {
 	#feet {
-		transform: translateY( 25rem );
+		transform: translateY( -5rem );
 	}
 }
 
@@ -21,7 +21,6 @@ body.dave #feet .dave { transform: translateY( 34rem ); }
 body.intro #feet .james { transform: translateY( 30rem ); }
 
 body.intro #feet {
-
 	.amanda, .dave {
 		display:none;
 	}
