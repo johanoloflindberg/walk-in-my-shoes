@@ -258,29 +258,30 @@ nav {
 
 /* Feet */
 #feet .amanda, #feet .james, #feet .dave {
-  transform: translateY(-30rem);
+  top: -30rem;
+  transform: translateY(0);
   transition: transform 0.6s cubic-bezier(0.56, 0.1, 0.34, 0.91); }
 
 body.amanda #feet, body.james #feet, body.dave #feet {
-  transform: translateY(-5rem); }
+  transform: translateY(25rem); }
 
 body.amanda #feet .amanda {
-  transform: translateY(4rem); }
+  transform: translateY(34rem); }
 
 body.james #feet .james {
-  transform: translateY(3rem); }
+  transform: translateY(33rem); }
 
 body.dave #feet .dave {
-  transform: translateY(4rem); }
+  transform: translateY(34rem); }
 
 body.intro #feet .james {
-  transform: translateY(0); }
+  transform: translateY(30rem); }
 
 body.intro #feet .amanda, body.intro #feet .dave {
   display: none; }
 
 body.hide-feet #feet .amanda, body.hide-feet #feet .james, body.hide-feet #feet .dave {
-  transform: translateY(-30rem); }
+  transform: translateY(0); }
 
 #feet {
   position: absolute;
@@ -886,14 +887,14 @@ ul.choices li {
     margin: 0 auto; }
 
   body.hide-header #feet {
-    transform: translateY(-4rem); }
+    transform: translateY(34rem) !important; }
 
   body.intro .ft-section.intro .intro-banner {
     margin-top: 20rem;
     margin-bottom: 7rem; }
   body.intro #feet {
     z-index: 1;
-    top: 5rem;
+    transform: translateY(36rem);
     transition: transform 0.6s cubic-bezier(0.56, 0.1, 0.34, 0.91);
     transition-delay: .5s; }
     body.intro #feet .james, body.intro #feet .amanda, body.intro #feet .dave {
@@ -949,7 +950,7 @@ ul.choices li {
     display: block;
     transform: translateY(0); }
   body.choose-path-page #feet {
-    transform: translateY(15rem); }
+    transform: translateY(52rem); }
     body.choose-path-page #feet p {
       text-align: center;
       position: absolute;
@@ -963,7 +964,7 @@ ul.choices li {
       opacity: 1; }
 
   body.james #feet, body.amanda #feet, body.dave #feet {
-    transform: translateY(5rem); }
+    transform: translateY(4rem); }
 
   .ft-section.james .inner, .ft-section.amanda .inner, .ft-section.dave .inner {
     max-width: 100rem;
