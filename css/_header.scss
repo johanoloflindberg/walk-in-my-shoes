@@ -1,7 +1,6 @@
 
 
 header {
-	background-color: #FAB149;
 	height: 50px;
 	width: 100%;
 	line-height: 50px;
@@ -18,7 +17,9 @@ header {
 	}
 
 	.inner {
-		margin: 0 1rem;
+		padding: 0 1rem;
+		background-color: #FAB149;
+		height: 50px;
 		p {  
 			text-align: left;
 		}

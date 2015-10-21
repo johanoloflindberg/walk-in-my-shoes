@@ -1,5 +1,4 @@
 header {
-  background-color: #FAB149;
   height: 50px;
   width: 100%;
   line-height: 50px;
@@ -12,7 +11,9 @@ header {
     -webkit-transform: translateY(-10rem);
     transform: translateY(-10rem); }
   header .inner {
-    margin: 0 1rem; }
+    padding: 0 1rem;
+    background-color: #FAB149;
+    height: 50px; }
     header .inner p {
       text-align: left; }
   header p {
@@ -862,19 +863,32 @@ ul.choices li {
 /* entire container, keeps perspective */
 @media (min-width: 1024px) {
   #feet {
-    top: 2rem; }
+    max-width: 102.4rem;
+    left: 50%;
+    margin-left: -51.2rem; }
+
+  header .inner {
+    max-width: 128rem;
+    margin: 0 auto; }
+
+  body.hide-header #feet {
+    transform: translateY(-4rem); }
 
   body.intro .ft-section.intro .intro-banner {
     margin-top: 20rem;
     margin-bottom: 7rem; }
-  body.intro #feet .james, body.intro #feet .amanda, body.intro #feet .dave {
-    transform: translateY(0);
-    display: block;
-    visibility: visible; }
-  body.intro #feet .james {
-    left: 30%; }
-  body.intro #feet .dave {
-    right: 30%; }
+  body.intro #feet {
+    top: 5rem;
+    transition: transform 0.6s cubic-bezier(0.56, 0.1, 0.34, 0.91);
+    transition-delay: .5s; }
+    body.intro #feet .james, body.intro #feet .amanda, body.intro #feet .dave {
+      transform: translateY(0);
+      display: block;
+      visibility: visible; }
+    body.intro #feet .james {
+      left: 30%; }
+    body.intro #feet .dave {
+      right: 30%; }
   body.intro .ft-page:not(.first) .inner {
     margin-top: 18rem;
     padding-top: 2rem;
@@ -884,4 +898,7 @@ ul.choices li {
     margin: 0 auto; }
 
   .ft-section .ft-page p {
-    margin: 1.5em 0; } }
+    margin: 1.5em 0; }
+
+  .choose-path li img {
+    display: none; } }
