@@ -154,8 +154,10 @@ ul.choices {
 	}
 }
 
-p.smaller {
-	font-size: .9em;
+.smaller {
+	&, & li {
+		font-size: .9em;
+	}
 }
 
 /* entire container, keeps perspective */

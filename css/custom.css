@@ -838,7 +838,7 @@ ul.choices li {
   list-style-type: disc;
   list-style-position: inside; }
 
-p.smaller {
+.smaller, .smaller li {
   font-size: .9em; }
 
 /* entire container, keeps perspective */
