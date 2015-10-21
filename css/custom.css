@@ -498,11 +498,24 @@ body.hide-feet #feet .amanda, body.hide-feet #feet .james, body.hide-feet #feet 
     font-size: 3rem; }
   .ft-section .outro .ctas .half {
     width: 47%;
-    padding: 0;
-    margin-top: 1.5rem;
-    background-color: #E9B54A; }
-    .ft-section .outro .ctas .half:hover {
-      background-color: #e3a21d; }
+    position: relative; }
+    .ft-section .outro .ctas .half .button {
+      width: 100%;
+      padding: 0;
+      margin-top: 1.5rem;
+      background-color: #E9B54A; }
+      .ft-section .outro .ctas .half .button:hover {
+        background-color: #e3a21d; }
+    .ft-section .outro .ctas .half .facebook, .ft-section .outro .ctas .half .twitter {
+      position: absolute;
+      top: 1.5rem;
+      left: 1.5rem;
+      display: none; }
+      .ft-section .outro .ctas .half .facebook img, .ft-section .outro .ctas .half .twitter img {
+        height: 3rem;
+        width: auto; }
+    .ft-section .outro .ctas .half .twitter {
+      left: 6.5rem; }
   .ft-section .outro .ctas .left {
     float: left; }
   .ft-section .outro .ctas .right {

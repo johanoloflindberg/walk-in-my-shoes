@@ -15,8 +15,15 @@ var forceWidthsForFixedElements = function() {
 	$("#footer-logo").css('bottom', 'auto').css('top', bodyHeight - $("#footer-logo").height() )
 	$("#budget-table").css('bottom', 'auto').css('top', bodyHeight )
 	$("#budget-table").css('left', bodyWidth - $("#budget-table").width() );
-
 }
+
+jQuery(window).load(function(){
+	var $ = jQuery;
+	// After outro has been copied on .ready()
+	$('a.share').click(function(){
+		$(this).fadeOut().siblings().fadeIn();
+	});
+});
 
 jQuery(document).ready( function( $ ) {
 

@@ -158,11 +158,32 @@
 		}
 		.half {
 			width: 47%;
-			padding: 0;
-			margin-top: 1.5rem;
-			background-color: #E9B54A;
-			&:hover {
-				background-color: darken( #E9B54A, 10% );
+			position: relative;
+
+			.button {
+				width: 100%;
+				padding: 0;
+				margin-top: 1.5rem;
+				background-color: #E9B54A;
+
+				&:hover {
+					background-color: darken( #E9B54A, 10% );
+				}
+			}
+
+
+			.facebook, .twitter {
+				position: absolute;
+				top: 1.5rem;
+				left: 1.5rem;
+				display:none;
+				img {
+					height: 3rem;
+					width: auto;
+				}
+			}
+			.twitter {
+				left: 6.5rem;
 			}
 		}
 		.left {
