@@ -172,10 +172,10 @@
 			}
 
 
-			.facebook, .twitter {
+			.icon {
 				position: absolute;
 				top: 1.5rem;
-				left: 1.5rem;
+				left: 0rem;
 				display:none;
 				img {
 					height: 3rem;
@@ -183,7 +183,10 @@
 				}
 			}
 			.twitter {
-				left: 6.5rem;
+				left: 3.8rem;
+			}
+			.linkedin {
+				left: 8.3rem;
 			}
 		}
 		.left {

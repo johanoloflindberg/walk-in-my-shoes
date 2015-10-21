@@ -507,16 +507,18 @@ body.hide-feet #feet .amanda, body.hide-feet #feet .james, body.hide-feet #feet 
       background-color: #E9B54A; }
       .ft-section .outro .ctas .half .button:hover {
         background-color: #e3a21d; }
-    .ft-section .outro .ctas .half .facebook, .ft-section .outro .ctas .half .twitter {
+    .ft-section .outro .ctas .half .icon {
       position: absolute;
       top: 1.5rem;
-      left: 1.5rem;
+      left: 0rem;
       display: none; }
-      .ft-section .outro .ctas .half .facebook img, .ft-section .outro .ctas .half .twitter img {
+      .ft-section .outro .ctas .half .icon img {
         height: 3rem;
         width: auto; }
     .ft-section .outro .ctas .half .twitter {
-      left: 6.5rem; }
+      left: 3.8rem; }
+    .ft-section .outro .ctas .half .linkedin {
+      left: 8.3rem; }
   .ft-section .outro .ctas .left {
     float: left; }
   .ft-section .outro .ctas .right {
