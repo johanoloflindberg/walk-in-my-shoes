@@ -133,5 +133,73 @@
 		}
 	}
 
+	body {
+		&.james, &.amanda, &.dave {
+			#feet {
+				transform: translateY( 5rem );
+			}
+		}
+	}
+
+
+	.ft-section {
+		&.james, &.amanda, &.dave {
+			.inner {
+				max-width: 100rem;
+				margin-left: auto !important;
+				margin-right: auto !important;
+				margin-top: 17rem !important;
+				padding-top: 1rem;
+				padding-bottom: 2rem;
+
+				h2 {
+					font-size: 1.8em;
+				}
+
+				a.button {
+					min-width: 10rem;
+					margin-right: .5rem;
+					margin-left: .5rem;
+				}
+			}
+			.innerer {
+				max-width: 80rem;
+				margin: 0 auto;
+			}
+		}
+	}
+
+	#footer {
+		.inner {
+			max-width: 130rem;
+		}
+	}
+
+	.ft-page.outro {
+		.inner {
+			margin-top: 0 !important;
+			height: 100%;
+
+			.logo-large {
+				margin-top: 0rem;
+				margin-bottom: 4rem;
+				height: 20rem;
+			}
+
+			.ctas {
+				width: 30rem;
+			}
+
+			.donate {
+				margin-bottom: .5rem;
+			}
+
+			.facebook { left: 1rem !important;}
+			.twitter { left: 5.7rem !important;}
+			.linkedin { left: 11rem !important;}
+
+		}
+	}
+
 
 }

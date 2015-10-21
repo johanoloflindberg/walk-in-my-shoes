@@ -7,20 +7,22 @@ var forceWidthsForFixedElements = function() {
 	var $ = jQuery,
 		bodyWidth = $(window).width(),
 		bodyHeight = $(window).height(),
-		headerWidth = $("header .inner").outerWidth()
+		headerWidth = $("header .inner").outerWidth(),
+		footerWidth = $("#footer .inner").outerWidth();
 
 	$("header, #footer, #footer-logo").width( bodyWidth ).css( 'width', bodyWidth );
 
-	if ( bodyWidth > 1023 ) {
+	if ( bodyWidth > 1300 ) {
 		$("nav").css('left', (bodyWidth - headerWidth)/2 + headerWidth - $("nav").width() );
+		$("#budget-table").css('left', (bodyWidth - footerWidth)/2 + footerWidth - $("#budget-table").width() );
 	}else {
 		$("nav").css('left', bodyWidth - $("nav").width() );
+		$("#budget-table").css('left', bodyWidth - $("#budget-table").width() );
 	}
 
 	$("#footer").css('bottom', 'auto').css('top', bodyHeight - $("#footer").height() )
 	$("#footer-logo").css('bottom', 'auto').css('top', bodyHeight - $("#footer-logo").height() )
 	$("#budget-table").css('bottom', 'auto').css('top', bodyHeight )
-	$("#budget-table").css('left', bodyWidth - $("#budget-table").width() );
 }
 
 jQuery(window).load(function(){
