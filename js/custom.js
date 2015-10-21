@@ -6,10 +6,16 @@
 var forceWidthsForFixedElements = function() {
 	var $ = jQuery,
 		bodyWidth = $(window).width(),
-		bodyHeight = $(window).height();
+		bodyHeight = $(window).height(),
+		headerWidth = $("header .inner").outerWidth()
 
 	$("header, #footer, #footer-logo").width( bodyWidth ).css( 'width', bodyWidth );
-	$("nav").css('left', bodyWidth - $("nav").width() );
+
+	if ( bodyWidth > 1023 ) {
+		$("nav").css('left', (bodyWidth - headerWidth)/2 + headerWidth - $("nav").width() );
+	}else {
+		$("nav").css('left', bodyWidth - $("nav").width() );
+	}
 
 	$("#footer").css('bottom', 'auto').css('top', bodyHeight - $("#footer").height() )
 	$("#footer-logo").css('bottom', 'auto').css('top', bodyHeight - $("#footer-logo").height() )
