@@ -152,7 +152,7 @@ jQuery(document).ready( function( $ ) {
 
 	var setBodyClass = function( $page ) {
 		var sectionClasses = [ 'amanda', 'dave', 'james', 'intro', 'outro' ],
-			pageClasses = [ 'hide-header', 'hide-footer', 'hide-feet', 'show-footer-logo' ];
+			pageClasses = [ 'hide-header', 'hide-footer', 'hide-feet', 'show-footer-logo', 'choose-path-page' ];
 
 		if ( location.hash.length > 0 ) {
 			sectionClasses.forEach( function( name ){

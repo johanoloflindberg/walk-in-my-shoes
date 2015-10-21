@@ -761,7 +761,7 @@ html {
   color: #F6EAD4;
   background-color: #646464; }
 
-.loading nav, .loading header, .loading #budget-table, .loading #footer {
+.loading nav, .loading header, .loading #budget-table, .loading #footer, .loading #choose-path-tablet {
   display: none !important;
   visibility: hidden !important; }
 
@@ -863,6 +863,9 @@ ul.choices li {
   font-size: .9em; }
 
 /* entire container, keeps perspective */
+#choose-path-tablet, #feet a.button {
+  display: none; }
+
 @media (min-width: 1024px) {
   #feet {
     max-width: 102.4rem;
@@ -880,17 +883,25 @@ ul.choices li {
     margin-top: 20rem;
     margin-bottom: 7rem; }
   body.intro #feet {
+    z-index: 1;
     top: 5rem;
     transition: transform 0.6s cubic-bezier(0.56, 0.1, 0.34, 0.91);
     transition-delay: .5s; }
     body.intro #feet .james, body.intro #feet .amanda, body.intro #feet .dave {
       transform: translateY(0);
       display: block;
-      visibility: visible; }
-    body.intro #feet .james {
-      left: 30%; }
+      visibility: visible;
+      position: absolute; }
     body.intro #feet .dave {
-      right: 30%; }
+      left: 5%; }
+    body.intro #feet .amanda {
+      left: 35%; }
+    body.intro #feet .james {
+      left: 66%; }
+    body.intro #feet a.button {
+      opacity: 0;
+      display: inline-block;
+      transition: opacity 0.6s linear; }
   body.intro .ft-page:not(.first) .inner {
     margin-top: 18rem;
     padding-top: 2rem;
@@ -902,5 +913,42 @@ ul.choices li {
   .ft-section .ft-page p {
     margin: 1.5em 0; }
 
-  .choose-path li img {
-    display: none; } }
+  .ft-page.choose-path .inner {
+    display: none; }
+
+  #choose-path-tablet {
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    width: 100%;
+    z-index: 600;
+    display: block;
+    transform: translateY(-20rem);
+    transition: transform 0.6s cubic-bezier(0.56, 0.1, 0.34, 0.91); }
+    #choose-path-tablet .cp-inner {
+      width: auto;
+      max-width: 128rem;
+      padding: 2rem 1rem;
+      margin: 0 auto;
+      background-color: #0B58A5;
+      text-align: center; }
+    #choose-path-tablet img {
+      height: 10rem;
+      width: auto; }
+
+  body.choose-path-page #choose-path-tablet {
+    display: block;
+    transform: translateY(0); }
+  body.choose-path-page #feet {
+    transform: translateY(15rem); }
+    body.choose-path-page #feet p {
+      text-align: center;
+      position: absolute;
+      top: 20rem;
+      width: 100%; }
+    body.choose-path-page #feet a.button {
+      display: inline-block;
+      font-size: 1.8em;
+      float: none;
+      margin: 0 auto;
+      opacity: 1; } }
