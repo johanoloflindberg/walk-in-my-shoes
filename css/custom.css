@@ -479,32 +479,33 @@ body.hide-feet #feet .amanda, body.hide-feet #feet .james, body.hide-feet #feet 
   background: #666666 url(../img/james/background-pattern.png) repeat; }
 .ft-section.outro .ft-page, .ft-section.intro .ft-page, .ft-section.dave .ft-page {
   background: black url(../img/dave/background-pattern.png) repeat; }
-.ft-section.outro .ft-page .inner {
+
+.ft-section .outro.ft-page .inner {
   margin-top: -4rem;
   margin-bottom: -4rem; }
-  .ft-section.outro .ft-page .inner .innerer {
+  .ft-section .outro.ft-page .inner .innerer {
     padding: 6rem 2rem 14rem 2rem;
     text-align: center; }
-.ft-section.outro .logo-large {
+.ft-section .outro .logo-large {
   height: 16rem;
   margin: 0 0 1rem 0; }
-.ft-section.outro .ctas {
+.ft-section .outro .ctas {
   width: 24rem;
   margin: 1rem auto 0 auto; }
-  .ft-section.outro .ctas .donate {
+  .ft-section .outro .ctas .donate {
     width: 100%;
     padding: 1rem 0;
     font-size: 3rem; }
-  .ft-section.outro .ctas .half {
+  .ft-section .outro .ctas .half {
     width: 47%;
     padding: 0;
     margin-top: 1.5rem;
     background-color: #E9B54A; }
-    .ft-section.outro .ctas .half:hover {
+    .ft-section .outro .ctas .half:hover {
       background-color: #e3a21d; }
-  .ft-section.outro .ctas .left {
+  .ft-section .outro .ctas .left {
     float: left; }
-  .ft-section.outro .ctas .right {
+  .ft-section .outro .ctas .right {
     float: right; }
 
 .ft-section.intro .intro-banner {

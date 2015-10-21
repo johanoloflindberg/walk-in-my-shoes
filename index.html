@@ -493,10 +493,14 @@
 
 					<p>Could you imagine living on the edge of a financial cliff each month as James is doing? Thousands of our neighbors are struggling to make ends meet as the cost of living rises. You can help keep them warm, housed and fed with your generous donation.</p>
 
-					<a href="#/outro/1" class="button">Finish</a>
+					<a href="#/james/outro" class="button">Finish</a>
 
 				</div>
 			</div>
+		</div>
+
+		<div id="/james/outro" class="outro ft-page hide-footer hide-feet show-footer-logo" data-id="outro">
+			<!-- Filled by /outro/outro -->
 		</div>
 
 	</div>
@@ -807,10 +811,14 @@
 
 					<p>Could you imagine living on the edge of a financial cliff each month as Amanda is doing? Thousands of our neighbors are struggling to make ends meet as the cost of living rises. You can help keep them warm, housed and fed with your generous donation.</p>
 
-					<a href="#/outro/1" class="button">Finish</a>
+					<a href="#/amanda/outro" class="button">Finish</a>
 
 				</div>
 			</div>
+		</div>
+
+		<div id="/amanda/outro" class="outro ft-page hide-footer hide-feet show-footer-logo" data-id="outro">
+			<!-- Filled by /outro/outro -->
 		</div>
 
 	</div>
@@ -1128,17 +1136,33 @@
 
 					<p>Could you imagine living on the edge of a financial cliff each month as Dave is doing? Thousands of our neighbors are struggling to make ends meet as the cost of living rises. You can help keep them warm, housed and fed with your generous donation.</p>
 
-					<a href="#/outro/1" class="button">Finish</a>
+					<a href="#/dave/outro" class="button">Finish</a>
 
 				</div>
 			</div>
 		</div>
 
+		<div id="/dave/outro" class="outro ft-page hide-footer hide-feet show-footer-logo" data-id="outro">
+			<!-- Filled by /outro/outro -->
+		</div>
+
 	</div>
 
-	<div class="ft-section outro" data-id="outro">
+	<div class="ft-section outro" data-id="outro" data-name="outro">
 
-		<div id="/outro/1" class="ft-page hide-footer show-footer-logo" data-id="1">
+		<script>
+			jQuery(document).ready(function($){
+				/* Copy HTML from outro below to each character's section to avoid big scroll */
+				var $outro = $('.ft-section.outro > .outro'),
+					$copyTo = $('.ft-section > .outro').not( $outro );
+
+				$copyTo.each( function(){
+					$(this).html( $outro.html() );
+				});
+			});
+		</script>
+
+		<div id="/outro/outro" class="outro ft-page hide-footer hide-feet show-footer-logo" data-id="outro">
 			<div class="inner">
 				<div class="innerer">
 					<img class="logo-large" src="img/logo.svg" />
@@ -1154,7 +1178,6 @@
 				</div>
 			</div>
 		</div>
-
 	</div>
 
 </div>

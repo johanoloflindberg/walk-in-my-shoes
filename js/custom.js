@@ -12,6 +12,7 @@ var forceWidthsForFixedElements = function() {
 	$("nav").css('left', bodyWidth - $("nav").width() );
 
 	$("#footer").css('bottom', 'auto').css('top', bodyHeight - $("#footer").height() )
+	$("#footer-logo").css('bottom', 'auto').css('top', bodyHeight - $("#footer-logo").height() )
 	$("#budget-table").css('bottom', 'auto').css('top', bodyHeight )
 	$("#budget-table").css('left', bodyWidth - $("#budget-table").width() );
 
