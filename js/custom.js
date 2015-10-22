@@ -28,9 +28,9 @@ var forceWidthsForFixedElements = function() {
 jQuery(window).load(function(){
 	var $ = jQuery;
 	// After outro has been copied on .ready()
-	$('a.share').click(function(){
+	$('a.share').on( 'click touchstart', function(){
 		$(this).fadeOut().siblings().fadeIn();
-	});
+	} );
 });
 
 jQuery(document).ready( function( $ ) {
