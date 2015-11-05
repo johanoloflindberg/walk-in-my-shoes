@@ -155,9 +155,18 @@
 		margin: 0 0 1rem 0;
 	}
 
+	h3.donate-cta {
+		color: #ED4F39;
+		font-size: 1.2em;
+		font-weight: bold;
+		margin: 1rem 0 0 0;
+		white-space: nowrap;
+	}
+
 	.ctas {
 		width: 24rem;
 		margin: 1rem auto 0 auto;
+
 		.donate {
 			width: 100%;
 			padding: 1rem 0;

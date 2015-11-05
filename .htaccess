@@ -1,0 +1,18 @@
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	RewriteBase /
+
+	#  Take all subdirectory requests, such as:
+	#      walkanc.org/2
+	#      walkanc.org/foobar
+	#
+	#  and rewrite them to:
+	#      walkanc.org/index.php?url=2
+	#      walkanc.org/index.php?url=foobar
+
+	RewriteRule ^/index\.php$ - [L]
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteRule ^(.*)$ /index.php?url=$1 [QSA,L]
+
+</IfModule>

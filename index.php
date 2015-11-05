@@ -1,3 +1,28 @@
+<?php
+/**
+ * See .htaccess rewrite rules.
+ * This index.php receives all requests to any subdirectory or file that doesn't exist (all 404's)
+ *
+ * For example:
+ *
+ * Take all subdirectory requests, such as:
+ *    walkanc.org/2
+ *    walkanc.org/foobar
+ *
+ * and rewrite them to:
+ *    walkanc.org/index.php?url=2
+ *    walkanc.org/index.php?url=foobar
+ *
+ */
+
+// $url will either be '/' or '2'
+if ( isset( $_GET['url'] ) ) {
+	$url = trim( $_GET['url'], '/ ' );
+}else {
+	$url = '/';
+}
+
+?>
 <!DOCTYPE HTML>
 <!--[if IE 6]>
 <html id="ie6" lang="en-US" class="ie ie6 lt-ie9">
@@ -18,7 +43,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0; minimal-ui">
 	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="author" content="United Way of Anchorae">
+	<meta name="author" content="United Way of Anchorage">
 
 	<meta property="og:title" content="Walk in My Shoes  — United Way Anchorage">
 	<meta property="og:type" content="website">
@@ -37,18 +62,18 @@
 	<title>Walk in My Shoes — United Way</title>
 	<meta name="description" content="Experience real life examples of the difficult budget decisions some of us have to make each month. Even when you are working hard, the world can throw you some curveballs that can change your life in an instant.">
 
-	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/flowtime.css">
-	<link rel="stylesheet" href="css/custom.css">
+	<link rel="stylesheet" href="/css/reset.css">
+	<link rel="stylesheet" href="/css/flowtime.css">
+	<link rel="stylesheet" href="/css/custom.css">
 
-	<link rel="shortcut icon" type="image/png"                      href="img/favicon.png" />
-	<link rel="apple-touch-icon-precomposed" 						href="img/touch-icon-iphone.png">
-	<link rel="apple-touch-icon-precomposed" 	sizes="72x72" 		href="img/touch-icon-ipad.png">
-	<link rel="apple-touch-icon-precomposed" 	sizes="114x114" 	href="img/touch-icon-iphone-retina.png">
-	<link rel="apple-touch-icon-precomposed" 	sizes="144x144" 	href="img/touch-icon-ipad-retina.png">
+	<link rel="shortcut icon" type="image/png"                      href="/img/favicon.png" />
+	<link rel="apple-touch-icon-precomposed" 						href="/img/touch-icon-iphone.png">
+	<link rel="apple-touch-icon-precomposed" 	sizes="72x72" 		href="/img/touch-icon-ipad.png">
+	<link rel="apple-touch-icon-precomposed" 	sizes="114x114" 	href="/img/touch-icon-iphone-retina.png">
+	<link rel="apple-touch-icon-precomposed" 	sizes="144x144" 	href="/img/touch-icon-ipad-retina.png">
 
-	<link rel="apple-touch-startup-image" href="img/startup-640x920.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)">
-	<link rel="apple-touch-startup-image" href="img/startup-640x1096.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)">
+	<link rel="apple-touch-startup-image" href="/img/startup-640x920.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)">
+	<link rel="apple-touch-startup-image" href="/img/startup-640x1096.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)">
 
 	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 
@@ -58,7 +83,7 @@
 	<header>
 		<div class="inner">
 			<p>
-				<img class="logo" src="img/logo.svg" />
+				<img class="logo" src="/img/logo.svg" />
 				walk in my shoes
 			</p>
 
@@ -75,7 +100,7 @@
 			<li><a href="http://igfn.us/f/kr3/n" target="_blank" class="button donate">donate</a></li>
 			<li>
 				<a href="http://www.liveunitedanc.org/" target="_blank" class="logo-united-way">
-					<img src="img/logo-united-way.svg" />
+					<img src="/img/logo-united-way.svg" />
 				</a>
 			</li>
 		</ul>
@@ -83,7 +108,7 @@
 	
 	<div id="choose-path-tablet">
 		<div class="cp-inner">
-			<img class="choose-path-img" src="img/choose-your-path.svg" alt="Choose Your Path" />
+			<img class="choose-path-img" src="/img/choose-your-path.svg" alt="Choose Your Path" />
 		</div>
 	</div>
 
@@ -91,19 +116,19 @@
 
 
 		<div class="amanda">
-			<img class="foot-left" src="img/amanda/foot-left.svg" />
-			<img class="foot-right" src="img/amanda/foot-right.svg" />
-			<img class="dress" src="img/amanda/dress.svg" />
+			<img class="foot-left" src="/img/amanda/foot-left.svg" />
+			<img class="foot-right" src="/img/amanda/foot-right.svg" />
+			<img class="dress" src="/img/amanda/dress.svg" />
 			<p><a class="button" href="#/amanda/1">Amanda</a></p>
 		</div>
 		<div class="dave">
-			<img class="foot-left" src="img/dave/foot-left.svg" />
-			<img class="foot-right" src="img/dave/foot-right.svg" />
+			<img class="foot-left" src="/img/dave/foot-left.svg" />
+			<img class="foot-right" src="/img/dave/foot-right.svg" />
 			<p><a class="button" href="#/dave/1">Dave</a></p>
 		</div>
 		<div class="james">
-			<img class="foot-left" src="img/james/foot-left.svg" />
-			<img class="foot-right" src="img/james/foot-right.svg" />
+			<img class="foot-left" src="/img/james/foot-left.svg" />
+			<img class="foot-right" src="/img/james/foot-right.svg" />
 			<p><a class="button" href="#/james/1">James</a></p>
 		</div>
 	</div>
@@ -111,7 +136,7 @@
 	<div id="footer-logo">
 		<div class="inner">
 			<a href="http://www.liveunitedanc.org/" target="_blank">
-				<img src="img/logo-united-way.svg" />
+				<img src="/img/logo-united-way.svg" />
 			</a>
 		</div>
 	</div>
@@ -172,7 +197,7 @@
 				<div class="innerer">
 					
 					<div class="intro-banner">
-						<img src="img/walk-in-my-shoes.svg" />
+						<img src="/img/walk-in-my-shoes.svg" />
 					</div>
 
 					<p>
@@ -216,12 +241,12 @@
 			<div class="inner">
 				<div class="innerer">
 
-					<img class="choose-path-img" src="img/choose-your-path.svg" alt="Choose Your Path" />
+					<img class="choose-path-img" src="/img/choose-your-path.svg" alt="Choose Your Path" />
 
 					<ul>
-						<li><a class="james" href="#/james/1"><img src="img/james/shoe.svg" />James</a></li>
-						<li><a class="amanda" href="#/amanda/1"><img src="img/amanda/shoe.svg" />Amanda</a></li>
-						<li><a class="dave" href="#/dave/1"><img src="img/dave/shoe.svg" />Dave</a></li>
+						<li><a class="james" href="#/james/1"><img src="/img/james/shoe.svg" />James</a></li>
+						<li><a class="amanda" href="#/amanda/1"><img src="/img/amanda/shoe.svg" />Amanda</a></li>
+						<li><a class="dave" href="#/dave/1"><img src="/img/dave/shoe.svg" />Dave</a></li>
 					</ul>
 
 				</div>
@@ -1178,24 +1203,33 @@
 		<div id="/outro/outro" class="outro ft-page hide-footer hide-feet show-footer-logo" data-id="outro">
 			<div class="inner">
 				<div class="innerer">
-					<img class="logo-large" src="img/logo.svg" />
+					<img class="logo-large" src="/img/logo.svg" />
+
+					<?php if ( '2' == $url ) : ?>
+						<h3 class="donate-cta">
+							Please give generously today via <br/>
+							your Workplace Campaign.
+						</h3>
+					<?php endif; ?>
 
 					<div class="ctas">
-						<a href="http://igfn.us/f/kr3/n" target="_blank" class="button donate">donate</a>
+						<?php if ( '/' == $url ) : ?>
+							<a href="http://igfn.us/f/kr3/n" target="_blank" class="button donate">donate</a>
+						<?php endif; ?>
 
 						<div class="left half">
 							<a href="#" class="button share">share</a>
 
 							<a class="icon twitter" href="http://twitter.com/share?text=I%20just%20experienced%20what%20it%E2%80%99s%20like%20for%20neighbors%20trying%20to%20make%20ends%20meet.%20You%20won%E2%80%99t%20believe%20your%20eyes!%20Check%20it%20out:" target="_blank">
-								<img src="img/icon-twitter.svg" />
+								<img src="/img/icon-twitter.svg" />
 							</a>
 
 							<a class="icon facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwalkanc.org%2F" target="_blank">
-								<img src="img/icon-facebook.svg" />
+								<img src="/img/icon-facebook.svg" />
 							</a>
 
 							<a class="icon linkedin" href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fwalkanc.org%2F&title=Walk%20in%20My%20Shoes%20%E2%80%94%C2%A0United%20Way%20Anchorage&summary=Experience%20real%20life%20examples%20of%20the%20difficult%20budget%20decisions%20some%20of%20us%20have%20to%20make%20each%20month.%20Even%20when%20you%20are%20working%20hard%2C%20the%20world%20can%20throw%20you%20some%20curveballs%20that%20can%20change%20your%20life%20in%20an%20instant.&source=walkanc.org" target="_blank">
-								<img src="img/icon-linkedin.svg" />
+								<img src="/img/icon-linkedin.svg" />
 							</a>
 
 						</div>
@@ -1212,10 +1246,10 @@
 
 </div>
 
-<script src="js/brav1toolbox.js"></script>
-<script src="js/flowtime.js"></script>
-<script src="js/prefixfree.min.js"></script>
-<script src="js/custom.js"></script>
+<script src="/js/brav1toolbox.js"></script>
+<script src="/js/flowtime.js"></script>
+<script src="/js/prefixfree.min.js"></script>
+<script src="/js/custom.js"></script>
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
